@@ -11,14 +11,13 @@
 
 @interface CMShowHUDManager ()
 
-@property (nonatomic, assign) dispatch_queue_t globalQueue;
-
 @end
 
 @implementation CMShowHUDManager
 
 #pragma mark- 默认的窗口 HUD
 - (MBProgressHUD *) defaultWindowHUD {
+    [self hideDefaultWindowHUD];
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo: window animated: YES];
     return hud;
@@ -41,14 +40,6 @@
     return showHUDManager;
 }
 
-#pragma mark- 全局队列
-- (dispatch_queue_t)globalQueue {
-    if (_globalQueue == nil) {
-        _globalQueue = dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0);
-    }
-    return _globalQueue;
-}
-
 #pragma mark- 展示信息, 带菊花
 - (void)showHUDWith:(NSString *)message {
     // 在主线程中进行
@@ -63,13 +54,14 @@
 #pragma mark- 隐藏
 - (void)hideHUD {
     __weak typeof(self)weakSelf = self;
-    dispatch_async(weakSelf.globalQueue, ^{
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf hideDefaultWindowHUD];
         });
     });
 }
 
+#pragma mark- 展示信息, 在指定间隔时间后隐藏
 - (void)showHUDWith:(NSString *)message afterDelay:(NSTimeInterval)timeInterval {
     // 在主线程中进行
     dispatch_async(dispatch_get_main_queue(), ^{
