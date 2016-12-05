@@ -25,4 +25,10 @@
     });
 }
 
+#pragma mark- 从故事版获取控制器
+- (UIViewController *)viewControllerFromStoryboard:(NSString *)storyboardKey identifier:(NSString *)identifier {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName: storyboardKey bundle: nil];
+    return [storyboard instantiateViewControllerWithIdentifier: identifier];
+}
+
 @end

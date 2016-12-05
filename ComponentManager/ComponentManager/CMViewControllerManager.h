@@ -25,4 +25,14 @@
  */
 - (void) togglesRootController: (UIViewController *)controller;
 
+/**
+ 从指定 storyboard 中获取控制器
+ 
+ @param storyboardKey storyBoard 的名字
+ @param identifier 控制器的标识符
+ @return 控制器对象
+ */
+- (UIViewController *) viewControllerFromStoryboard:(NSString *)storyboardKey identifier: (NSString *)identifier;
+
+
 @end
