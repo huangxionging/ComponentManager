@@ -40,6 +40,11 @@
     
 }
 
+#pragma mark- 第三方登录
+- (void)thirdLoginWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    
+}
+
 #pragma mark- 判断手机号码格式是否正确
 - (BOOL)validMobile:(NSString *)mobile {
     

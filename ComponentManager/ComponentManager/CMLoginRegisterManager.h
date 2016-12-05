@@ -15,12 +15,16 @@ typedef NS_ENUM(NSUInteger, CMLoginRegisterErrorType) {
     CMLoginRegisterErrorTypePhoneNumberInvalid  = 10000,
     // 手机号已注册
     CMLoginRegisterErrorTypePhoneNumberRegistered,
+    // 验证码错误
+    CMLoginRegisterErrorTypeVerificationCodeError,
     // 网络错误
     CMLoginRegisterErrorTypeNetworkError,
     // 参数不合法
-    NSLoginRegisterErrorTypeParameterInvalid,
+    CMLoginRegisterErrorTypeParameterInvalid,
     // 签名不合法
     CMLoginRegisterErrorTypeSignInvalid,
+    // 第三方登录取消
+    CMLoginRegisterErrorTypeThirdLoginCancel,
 };
 
 /**
@@ -92,4 +96,14 @@ typedef NS_ENUM(NSUInteger, CMLoginRegisterErrorType) {
  @param failure 失败回调
  */
 - (void) logoutWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
+/**
+ 第三方登录
+ 
+ @param parameters 参数描述
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)thirdLoginWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
 @end
