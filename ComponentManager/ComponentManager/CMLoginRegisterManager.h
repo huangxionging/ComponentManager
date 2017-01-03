@@ -25,6 +25,8 @@ typedef NS_ENUM(NSUInteger, CMLoginRegisterErrorType) {
     CMLoginRegisterErrorTypeSignInvalid,
     // 第三方登录取消
     CMLoginRegisterErrorTypeThirdLoginCancel,
+    // 提交信息失败
+    CMLoginRegisterErrorTypeSubmitError,
 };
 
 /**
@@ -98,12 +100,31 @@ typedef NS_ENUM(NSUInteger, CMLoginRegisterErrorType) {
 - (void) logoutWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 /**
- 第三方登录
+ 第三方登录 子类需重写, 因为不同的 APP 接口不同
  
  @param parameters 参数描述
  @param success 成功回调
  @param failure 失败回调
  */
 - (void)thirdLoginWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
+/**
+ 第三方登录获取用户信息 子类需重写, 因为不同的 APP 接口不同
+ 
+ @param parameters 参数描述
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)getThirdLoginUserInfoWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
+
+/**
+ 上传图片接口
+
+ @param parameters 参数
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void) uploadImageWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 @end

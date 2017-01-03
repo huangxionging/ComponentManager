@@ -17,7 +17,7 @@
 }
 
 #pragma mark- 切换根控制器
-- (void)togglesRootController:(UIViewController *)controller {
++ (void)togglesRootController:(UIViewController *)controller {
     // 在主线程里面执行
     dispatch_async(dispatch_get_main_queue(), ^{
         UIWindow *window = [[UIApplication sharedApplication].delegate window];
@@ -26,9 +26,60 @@
 }
 
 #pragma mark- 从故事版获取控制器
-- (UIViewController *)viewControllerFromStoryboard:(NSString *)storyboardKey identifier:(NSString *)identifier {
++ (UIViewController *)viewControllerFromStoryboard:(NSString *)storyboardKey identifier:(NSString *)identifier {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName: storyboardKey bundle: nil];
     return [storyboard instantiateViewControllerWithIdentifier: identifier];
 }
+
++ (void)setViewController:(UIViewController *)controller backBarButtonItemTitle:(NSString *)title {
+    controller.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: title style:UIBarButtonItemStylePlain target: nil action: nil];
+}
+
+#pragma mark---获取当前顶层视图控制器
++ (UIViewController *)currentViewController {
+    UIViewController *result = nil;
+    
+    // 获取住窗口
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    
+    // 如果主窗口不是普通的窗口则执行if语句
+    if (window.windowLevel != UIWindowLevelNormal) {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        
+        // 遍历窗口找到窗口
+        for(UIWindow * tmpWin in windows) {
+            if (tmpWin.windowLevel == UIWindowLevelNormal) {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    // 获得窗口的第一个子视图
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    
+    // 先判断 UITransitionView
+    NSString *classString = NSStringFromClass([frontView class]);
+    if ([classString isEqualToString: @"UITransitionView"]) {
+        NSLog(@"%@", frontView);
+        if (frontView.subviews.count != 0) {
+            frontView = frontView.subviews[0];
+        }
+    }
+    
+    // 得到其响应者
+    id nextResponder = [frontView nextResponder];
+    
+    // 获取最上层的控制器
+    if ([nextResponder isKindOfClass:[UIViewController class]]) {
+        result = nextResponder;
+    }
+    else {
+        result = window.rootViewController;
+    }
+    
+    return result;
+}
+
 
 @end

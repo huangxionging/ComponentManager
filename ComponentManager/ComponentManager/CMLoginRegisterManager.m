@@ -45,6 +45,16 @@
     
 }
 
+#pragma mark- 第三方登录获取用户信息
+- (void)getThirdLoginUserInfoWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    
+}
+
+#pragma mark- 上传头像
+- (void)uploadImageWithParameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    
+}
+
 #pragma mark- 判断手机号码格式是否正确
 - (BOOL)validMobile:(NSString *)mobile {
     

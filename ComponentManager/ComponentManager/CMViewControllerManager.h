@@ -11,6 +11,7 @@
 
 @interface CMViewControllerManager : NSObject
 
+
 /**
  默认产生管理器对象的方法
  
@@ -23,16 +24,27 @@
 
  @param controller 视图控制器
  */
-- (void) togglesRootController: (UIViewController *)controller;
++ (void) togglesRootController: (UIViewController *)controller;
+
 
 /**
  从指定 storyboard 中获取控制器
- 
+
  @param storyboardKey storyBoard 的名字
  @param identifier 控制器的标识符
  @return 控制器对象
  */
-- (UIViewController *) viewControllerFromStoryboard:(NSString *)storyboardKey identifier: (NSString *)identifier;
++ (UIViewController *) viewControllerFromStoryboard:(NSString *)storyboardKey identifier: (NSString *)identifier;
 
+
+/**
+ 设置控制器下一个界面的返回按钮
+
+ @param controller 控制器
+ @param title 标题
+ */
++ (void) setViewController:(UIViewController *)controller backBarButtonItemTitle: (NSString *)title;
+
++ (UIViewController *)currentViewController;
 
 @end
