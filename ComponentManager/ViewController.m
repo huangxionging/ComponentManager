@@ -37,7 +37,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.keyboardManager removeKeyboardAllNotification];
+    [self.keyboardManager removeKeyboardNotification];
 }
 
 - (void)viewDidLoad {
@@ -53,7 +53,13 @@
     
     [self.keyboardManager hideKeyboardForView: self.textField];
     [self.keyboardManager setKeyboardBlock:^(id result, BOOL isShow) {
-        
+        if (isShow) {
+            NSLog(@"键盘弹出");
+            
+//            self.bottom.constant = -100;
+        } else {
+            NSLog(@"键盘隐藏");
+        }
         NSLog(@"%@", result);
     }];
 }

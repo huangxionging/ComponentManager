@@ -31,12 +31,12 @@
 /**
  删除键盘通知
  */
-- (void) removeKeyboardAllNotification;
+- (void) removeKeyboardNotification;
 
 /**
  为输入控件添加收键盘的 view
 
- @param view 待添加的 view(输入控件)
+ @param view 待添加的 view(输入控件, UITextField, UITextView)
  */
 - (void) hideKeyboardForView: (UIView *)view;
 

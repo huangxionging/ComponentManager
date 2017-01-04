@@ -37,4 +37,21 @@
  */
 - (UIImage *)normalizedImage;
 
+
+/**
+ 裁剪图像
+
+ @param reSize 新尺寸
+ @return 新图像
+ */
+- (UIImage *)resizeImageToSize:(CGSize)reSize;
+
+/**
+ 缩放图像
+
+ @param scale 缩放比例
+ @return 缩放后的图像
+ */
+- (UIImage *)scaleImageToScale:(float)scale;
+
 @end

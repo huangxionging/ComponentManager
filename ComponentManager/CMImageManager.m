@@ -15,6 +15,7 @@
     return manager;
 }
 
+#pragma mark- 正确的方向的图像
 - (UIImage *)fixOrientation {
     // 已经正确的方向
     if (self.image.imageOrientation == UIImageOrientationUp) {
@@ -99,6 +100,7 @@
     return img;
 }
 
+#pragma mark- 正常的图像
 - (UIImage *)normalizedImage {
     if (self.image.imageOrientation == UIImageOrientationUp) return self.image;
     
@@ -109,9 +111,10 @@
     return normalizedImage;
 }
 
-- (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize {
+#pragma mark- 裁剪图像
+- (UIImage *)resizeImageToSize:(CGSize)reSize {
     UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
-    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
+    [self.image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
     UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -119,13 +122,13 @@
     
 }
 
-- (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize {
+#pragma mark- 缩放图像
+- (UIImage *)scaleImageToScale:(float)scale {
     
-    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * scaleSize, image.size.height *scaleSize));
-    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height * scaleSize)];
+    UIGraphicsBeginImageContext(CGSizeMake(self.image.size.width * scale, self.image.size.height * scale));
+    [self.image drawInRect:CGRectMake(0, 0, self.image.size.width * scale, self.image.size.height * scale)];
     UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return scaledImage;
     
 }
