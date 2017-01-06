@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CMShowHUDManager.h"
 #import "CMKeyboardManager.h"
+#import "CMQRCodeManager.h"
 
 @interface ViewController ()
 
@@ -56,11 +57,22 @@
         if (isShow) {
             NSLog(@"键盘弹出");
             
-//            self.bottom.constant = -100;
+            self.bottom.constant = -312;
         } else {
             NSLog(@"键盘隐藏");
+            self.bottom.constant = -37;
         }
         NSLog(@"%@", result);
+    }];
+    
+    UIImage *image = [CMQRCodeManager encodeWithObject: @{@"key" : @"https://www.baidu.com"} size: CGSizeMake(300, 300)];
+    self.qrImage.image = image;
+    NSString *str = [CMQRCodeManager decodeWithImage: image];
+    NSData *data = [str dataUsingEncoding: NSUTF8StringEncoding];
+    NSDictionary *dicton = [NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error: nil];
+    NSString *https = dicton[@"key"];
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString: https] options: nil completionHandler:^(BOOL success) {
+        
     }];
 }
 

@@ -11,14 +11,21 @@
 
 @interface CMQRCodeManager : NSObject
 
+/**
+ 根据字典生成的二维码
+
+ @param object id 类型
+ @param size 尺寸大小
+ @return 对象
+ */
++ (UIImage *) encodeWithObject: (id) object size:(CGSize)size;
 
 /**
- 根据文本生成二维码
+ 识别二维码
 
- @param text 文本描述
- @param size 尺寸信息
- @return 二维码图
+ @param image 二维码图片
+ @return 二维码生成的结果
  */
-+ (UIImage *) encodeWithText: (NSString *) text size: (CGSize) size;
++ (NSString *) decodeWithImage: (UIImage *)image;
 
 @end

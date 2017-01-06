@@ -11,14 +11,28 @@
 
 @implementation CMQRCodeManager
 
-+ (UIImage *)encodeWithText:(NSString *)text size:(CGSize)size{
++ (UIImage *)encodeWithObject:(id)object size:(CGSize)size {
+    if (!object) {
+        return nil;
+    }
+    
+    NSError *error = nil;
+    NSData *data = nil;
+    if ([object isKindOfClass: [NSArray class]] || [object isKindOfClass: [NSDictionary class]]) {
+       data = [NSJSONSerialization dataWithJSONObject: object options: NSJSONWritingPrettyPrinted error: &error];
+    } else {
+        NSString *text = [NSString stringWithFormat: @"%@", object];
+        data = [text dataUsingEncoding: NSUTF8StringEncoding];
+    }
+    
+    if (error) {
+        NSLog(@"%@", error);
+        return nil;
+    }
     UIImage *codeImage = nil;
-    NSData *data = [text dataUsingEncoding: NSUTF8StringEncoding];
     CIFilter *qrFilter = [CIFilter filterWithName: @"CIQRCodeGenerator"];
     [qrFilter setValue:data forKey:@"inputMessage"];
     [qrFilter setValue:@"M" forKey:@"inputCorrectionLevel"];
-    
-    
     UIColor *onColor = [UIColor blackColor];
     UIColor *offColor = [UIColor whiteColor];
     
@@ -42,7 +56,17 @@
     
     CGImageRelease(cgImage);
     return codeImage;
+}
 
++ (NSString *)decodeWithImage:(UIImage *)image {
+    UIImage *srcImage = image;
+    CIContext *context = [CIContext context];
+    CIDetector *detector = [CIDetector detectorOfType: CIDetectorTypeQRCode context: context options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
+    CIImage *qrImage = [CIImage imageWithCGImage: srcImage.CGImage];
+    NSArray *features = [detector featuresInImage: qrImage];
+    CIQRCodeFeature *feature = [features firstObject];
+    NSString *result = [feature messageString];
+    return result;
 }
 
 @end

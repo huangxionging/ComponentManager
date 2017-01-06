@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottom;
+@property (weak, nonatomic) IBOutlet UIImageView *qrImage;
 
 @end
 
