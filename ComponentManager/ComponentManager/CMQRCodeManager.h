@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/**
+ 支持 iOS 8以上系统
+ */
 @interface CMQRCodeManager : NSObject
 
 /**

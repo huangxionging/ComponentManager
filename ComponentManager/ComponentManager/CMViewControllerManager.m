@@ -7,6 +7,7 @@
 //
 
 #import "CMViewControllerManager.h"
+#import <libxml2/libxml/HTMLparser.h>
 
 @implementation CMViewControllerManager
 
@@ -29,10 +30,6 @@
 + (UIViewController *)viewControllerFromStoryboard:(NSString *)storyboardKey identifier:(NSString *)identifier {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName: storyboardKey bundle: nil];
     return [storyboard instantiateViewControllerWithIdentifier: identifier];
-}
-
-+ (void)setViewController:(UIViewController *)controller backBarButtonItemTitle:(NSString *)title {
-    controller.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: title style:UIBarButtonItemStylePlain target: nil action: nil];
 }
 
 #pragma mark---获取当前顶层视图控制器
@@ -81,5 +78,12 @@
     return result;
 }
 
+
+
+- (void)setviewController:(UIViewController *)controller backTitle:(NSString *)title {
+    if (controller.navigationController) {
+        controller.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: title style:UIBarButtonItemStylePlain target: nil action: nil];
+    }
+}
 
 @end

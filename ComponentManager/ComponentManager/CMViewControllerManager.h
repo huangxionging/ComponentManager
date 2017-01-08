@@ -47,4 +47,12 @@
 
 + (UIViewController *)currentViewController;
 
+/**
+ 设置控制器的返回标题, 对下一级控制器有效
+
+ @param controller 控制器
+ @param title 返回标题
+ */
+- (void) setviewController: (UIViewController *)controller backTitle: (NSString *)title;
+
 @end
