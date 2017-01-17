@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2055AB81E2C5C3700ABF746 /* CMScanQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2055AB71E2C5C3700ABF746 /* CMScanQRCodeManager.m */; };
+		F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */; };
+		F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */; };
 		F2506EDB1E1B3B370080D0EB /* CMCameraManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506ED21E1B3B370080D0EB /* CMCameraManger.m */; };
 		F2506EDC1E1B3B370080D0EB /* CMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506ED41E1B3B370080D0EB /* CMKeyboardManager.m */; };
 		F2506EDD1E1B3B370080D0EB /* CMPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506ED61E1B3B370080D0EB /* CMPushManager.m */; };
@@ -61,6 +64,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2055AB61E2C5C3700ABF746 /* CMScanQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMScanQRCodeManager.h; sourceTree = "<group>"; };
+		F2055AB71E2C5C3700ABF746 /* CMScanQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMScanQRCodeManager.m; sourceTree = "<group>"; };
+		F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shakeMusic.wav; sourceTree = "<group>"; };
+		F2055ABB1E2CAF5700ABF746 /* beep.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.ogg; sourceTree = "<group>"; };
+		F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = qrcode_found.wav; sourceTree = "<group>"; };
 		F2506ED11E1B3B370080D0EB /* CMCameraManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCameraManger.h; path = ComponentManager/CMCameraManger.h; sourceTree = "<group>"; };
 		F2506ED21E1B3B370080D0EB /* CMCameraManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCameraManger.m; path = ComponentManager/CMCameraManger.m; sourceTree = "<group>"; };
 		F2506ED31E1B3B370080D0EB /* CMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMKeyboardManager.h; path = ComponentManager/CMKeyboardManager.h; sourceTree = "<group>"; };
@@ -202,6 +210,9 @@
 				F2618B2F1DF2BA6500CB0605 /* AppDelegate.h */,
 				F2618B301DF2BA6500CB0605 /* AppDelegate.m */,
 				F2618B321DF2BA6500CB0605 /* ViewController.h */,
+				F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */,
+				F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */,
+				F2055ABB1E2CAF5700ABF746 /* beep.ogg */,
 				F2618B331DF2BA6500CB0605 /* ViewController.m */,
 				F2618B461DF2BBBC00CB0605 /* ComponentManager */,
 				F2618BC01DF2C2DB00CB0605 /* ThirdLibrary */,
@@ -239,6 +250,8 @@
 				F2506ED61E1B3B370080D0EB /* CMPushManager.m */,
 				F2506ED71E1B3B370080D0EB /* CMQRCodeManager.h */,
 				F2506ED81E1B3B370080D0EB /* CMQRCodeManager.m */,
+				F2055AB61E2C5C3700ABF746 /* CMScanQRCodeManager.h */,
+				F2055AB71E2C5C3700ABF746 /* CMScanQRCodeManager.m */,
 				F2506ED91E1B3B370080D0EB /* CMTimerManager.h */,
 				F2506EDA1E1B3B370080D0EB /* CMTimerManager.m */,
 				F2506EE01E1B3BBA0080D0EB /* CMImageManager.h */,
@@ -440,7 +453,7 @@
 				TargetAttributes = {
 					F2618B281DF2BA6500CB0605 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = U9662QUFW3;
+						DevelopmentTeam = 6EW99E5PRN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -471,6 +484,8 @@
 				F2618B3C1DF2BA6500CB0605 /* LaunchScreen.storyboard in Resources */,
 				F2618B391DF2BA6500CB0605 /* Assets.xcassets in Resources */,
 				F2618B371DF2BA6500CB0605 /* Main.storyboard in Resources */,
+				F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */,
+				F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +526,7 @@
 				F2618C421DF2C2DB00CB0605 /* UIButton+WebCache.m in Sources */,
 				F2618C3E1DF2C2DB00CB0605 /* SDWebImageDownloader.m in Sources */,
 				F2618C441DF2C2DB00CB0605 /* UIImage+MultiFormat.m in Sources */,
+				F2055AB81E2C5C3700ABF746 /* CMScanQRCodeManager.m in Sources */,
 				F2618C1F1DF2C2DB00CB0605 /* AFSecurityPolicy.m in Sources */,
 				F2506EDE1E1B3B370080D0EB /* CMQRCodeManager.m in Sources */,
 				F2618C331DF2C2DB00CB0605 /* FMDatabaseQueue.m in Sources */,
@@ -594,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -637,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -649,8 +665,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U9662QUFW3;
+				DEVELOPMENT_TEAM = 6EW99E5PRN;
 				INFOPLIST_FILE = ComponentManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.new-life.ComponentManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -661,8 +678,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U9662QUFW3;
+				DEVELOPMENT_TEAM = 6EW99E5PRN;
 				INFOPLIST_FILE = ComponentManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.new-life.ComponentManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
