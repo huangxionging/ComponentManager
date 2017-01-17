@@ -31,10 +31,6 @@
     return [storyboard instantiateViewControllerWithIdentifier: identifier];
 }
 
-+ (void)setViewController:(UIViewController *)controller backBarButtonItemTitle:(NSString *)title {
-    controller.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: title style:UIBarButtonItemStylePlain target: nil action: nil];
-}
-
 #pragma mark---获取当前顶层视图控制器
 + (UIViewController *)currentViewController {
     UIViewController *result = nil;
@@ -81,5 +77,11 @@
     return result;
 }
 
+#pragma mark- 设置控制器标题
+- (void)setViewController:(UIViewController *)controller backTitle:(NSString *)title {
+    if (controller.navigationController) {
+        controller.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: title style:UIBarButtonItemStylePlain target: nil action: nil];
+    }
+}
 
 @end

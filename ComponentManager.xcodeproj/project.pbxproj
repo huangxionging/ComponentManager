@@ -173,6 +173,7 @@
 		F2618C4C1DF3BB8400CB0605 /* CMViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMViewControllerManager.m; path = ComponentManager/CMViewControllerManager.m; sourceTree = "<group>"; };
 		F2618C4E1DF3BB9D00CB0605 /* CMShowHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMShowHUDManager.h; path = ComponentManager/CMShowHUDManager.h; sourceTree = "<group>"; };
 		F2618C4F1DF3BB9D00CB0605 /* CMShowHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMShowHUDManager.m; path = ComponentManager/CMShowHUDManager.m; sourceTree = "<group>"; };
+		F2CB57021E2DCF2F00B6F883 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +418,7 @@
 		F2618C481DF2EADF00CB0605 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2CB57021E2DCF2F00B6F883 /* libxml2.2.tbd */,
 				F2618C491DF2EADF00CB0605 /* libsqlite3.0.tbd */,
 			);
 			name = Frameworks;

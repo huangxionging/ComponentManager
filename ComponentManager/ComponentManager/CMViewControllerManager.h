@@ -36,15 +36,19 @@
  */
 + (UIViewController *) viewControllerFromStoryboard:(NSString *)storyboardKey identifier: (NSString *)identifier;
 
+/**
+ 当前控制器
+
+ @return 控制器
+ */
++ (UIViewController *)currentViewController;
 
 /**
- 设置控制器下一个界面的返回按钮
+ 设置控制器的返回标题, 对下一级控制器有效
 
  @param controller 控制器
- @param title 标题
+ @param title 返回标题
  */
-+ (void) setViewController:(UIViewController *)controller backBarButtonItemTitle: (NSString *)title;
-
-+ (UIViewController *)currentViewController;
+- (void) setViewController: (UIViewController *)controller backTitle: (NSString *)title;
 
 @end
