@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class CMQRCodeManager;
+#import <AVFoundation/AVFoundation.h>
 
 @interface  CMScanAction : NSObject
 
+/**
+ 媒体对象
+ */
+@property (nonatomic, copy) NSArray *metadataObjectTypes;
 
 /**
  需要扫描的视图
@@ -29,7 +33,7 @@
 @property (nonatomic, copy) BOOL(^actionBlock)(NSString *stringValue);
 
 
-+ (instancetype) actionWithScanView: (UIView *)scanView validRect: (CGRect) validRect actionBlock:(BOOL(^)(NSString *stringValue))actionBlock;
++ (instancetype) actionWithScanView: (UIView *)scanView validRect: (CGRect) validRect metadataObjectTypes:(NSArray *)metadataObjectTypes actionBlock:(BOOL(^)(NSString *stringValue))actionBlock;
 
 @end
 
@@ -72,5 +76,6 @@
  @param path 声音路径
  */
 - (void) playSoundWithPath: (NSString *)path;
+
 
 @end

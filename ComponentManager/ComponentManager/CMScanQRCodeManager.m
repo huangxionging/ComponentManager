@@ -6,20 +6,19 @@
 //  Copyright © 2017年 huangxiong. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
 #import "CMScanQRCodeManager.h"
-#import "CMQRCodeManager.h"
 #import "CMShowHUDManager.h"
 
 @implementation CMScanAction
 
 #pragma mark- 操作描述
-+ (instancetype) actionWithScanView:(UIView *)scanView validRect:(CGRect)validRect actionBlock:(BOOL (^)(NSString *))actionBlock {
++ (instancetype) actionWithScanView:(UIView *)scanView validRect:(CGRect)validRect metadataObjectTypes:(NSArray *)metadataObjectTypes actionBlock:(BOOL (^)(NSString *))actionBlock {
     CMScanAction *action = [[super alloc] init];
     if (action) {
         action.scanView = scanView;
         action.validRect = validRect;
         action.actionBlock = actionBlock;
+        action.metadataObjectTypes = metadataObjectTypes;
     }
     return action;
 }
@@ -81,8 +80,13 @@
     if (_captureSession == nil) {
         _captureSession = [[AVCaptureSession alloc] init];
         [_captureSession setSessionPreset: ([UIScreen mainScreen].bounds.size.height < 500) ? AVCaptureSessionPreset640x480:AVCaptureSessionPresetHigh];
-        [_captureSession addInput: self.captureDeviceInput];
-        [_captureSession addOutput: self.captureMetadataOutput];
+        if ([_captureSession canAddInput:self.captureDeviceInput]) {
+            [_captureSession addInput: self.captureDeviceInput];
+        }
+        
+        if ([_captureSession canAddOutput: self.captureMetadataOutput]) {
+            [_captureSession addOutput: self.captureMetadataOutput];
+        }
     }
     return _captureSession;
 }
@@ -137,12 +141,16 @@
         [self.action.scanView.layer insertSublayer: self.captureVideoPreviewLayer atIndex: 0];
         // 兼容条码 不能在创建 captureMetadataOutput 的时候设置
         // 需在 captureSession 添加了输出才行
-        self.captureMetadataOutput.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
-        
-        CGRect scanRect = CGRectMake(self.action.validRect.origin.y / self.action.scanView.frame.size.height, self.action.validRect.origin.x / self.action.scanView.frame.size.width, self.action.validRect.size.height / self.action.scanView.frame.size.height, self.action.validRect.size.width / self.action.scanView.frame.size.width);
-        self.captureMetadataOutput.rectOfInterest = scanRect;
+        NSSet *availableSet = [NSSet setWithArray: self.captureMetadataOutput.availableMetadataObjectTypes];
+        NSSet *destinationSet = [NSSet setWithArray: self.action.metadataObjectTypes];
+        if ([destinationSet isSubsetOfSet: availableSet]) {
+            self.captureMetadataOutput.metadataObjectTypes = self.action.metadataObjectTypes;
+        }
         
         [self.captureSession startRunning];
+        // 设置有效扫描区域
+        CGRect intertRect = [self.captureVideoPreviewLayer metadataOutputRectOfInterestForRect: self.action.validRect];
+        self.captureMetadataOutput.rectOfInterest = intertRect;
     }
     
 }
@@ -156,7 +164,8 @@
         if (self.action.actionBlock) {
             BOOL done = self.action.actionBlock(metadataObject.stringValue);
             if(done) {
-                return;
+                // 开始运行
+                [self startRunning];
             }
         }
     }
@@ -187,6 +196,10 @@
     AudioServicesPlaySystemSound(soundID);
     // 播放震动
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+- (void)dealloc {
+    NSLog(@"二维码扫描器挂了...挂了");
 }
 
 @end

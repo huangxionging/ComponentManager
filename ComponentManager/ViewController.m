@@ -109,7 +109,7 @@
                 }];
                 return;
             }
-            [weakSelf.scanQRCodeManager modifyScanAction: [CMScanAction actionWithScanView: self.view validRect: CGRectMake(windowSize.size.width / 2 - 100, 100, 200, 200) actionBlock:^BOOL(NSString *stringValue) {
+            [CMScanAction actionWithScanView:self.view validRect: CGRectMake(windowSize.size.width / 2 - 100, 100, 200, 200) metadataObjectTypes: @[] actionBlock:^BOOL(NSString *stringValue) {
                 NSLog(@"%@", stringValue);
                 NSString *strSoundFile = [[NSBundle mainBundle] pathForResource:@"qrcode_found" ofType:@"wav"];
                 [weakSelf.scanQRCodeManager playSoundWithPath: strSoundFile];
@@ -119,7 +119,7 @@
                 
                 
                 return YES;
-            }]];
+            }];
         });
     
 }

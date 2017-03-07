@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F2055AB81E2C5C3700ABF746 /* CMScanQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2055AB71E2C5C3700ABF746 /* CMScanQRCodeManager.m */; };
 		F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */; };
 		F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */; };
-		F2506EDB1E1B3B370080D0EB /* CMCameraManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506ED21E1B3B370080D0EB /* CMCameraManger.m */; };
-		F2506EDC1E1B3B370080D0EB /* CMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506ED41E1B3B370080D0EB /* CMKeyboardManager.m */; };
-		F2506EDD1E1B3B370080D0EB /* CMPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506ED61E1B3B370080D0EB /* CMPushManager.m */; };
-		F2506EDE1E1B3B370080D0EB /* CMQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506ED81E1B3B370080D0EB /* CMQRCodeManager.m */; };
-		F2506EDF1E1B3B370080D0EB /* CMTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506EDA1E1B3B370080D0EB /* CMTimerManager.m */; };
-		F2506EE21E1B3BBA0080D0EB /* CMImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2506EE11E1B3BBA0080D0EB /* CMImageManager.m */; };
+		F21072201E6E617F00D7695D /* CMCameraManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F210720F1E6E617F00D7695D /* CMCameraManger.m */; };
+		F21072211E6E617F00D7695D /* CMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21072111E6E617F00D7695D /* CMKeyboardManager.m */; };
+		F21072221E6E617F00D7695D /* CMLoginRegisterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21072131E6E617F00D7695D /* CMLoginRegisterManager.m */; };
+		F21072231E6E617F00D7695D /* CMPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21072151E6E617F00D7695D /* CMPushManager.m */; };
+		F21072241E6E617F00D7695D /* CMQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21072171E6E617F00D7695D /* CMQRCodeManager.m */; };
+		F21072251E6E617F00D7695D /* CMScanQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21072191E6E617F00D7695D /* CMScanQRCodeManager.m */; };
+		F21072261E6E617F00D7695D /* CMShowHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F210721B1E6E617F00D7695D /* CMShowHUDManager.m */; };
+		F21072271E6E617F00D7695D /* CMTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F210721D1E6E617F00D7695D /* CMTimerManager.m */; };
+		F21072281E6E617F00D7695D /* CMViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F210721F1E6E617F00D7695D /* CMViewControllerManager.m */; };
+		F210722B1E6E61D700D7695D /* CMImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F210722A1E6E61D700D7695D /* CMImageManager.m */; };
 		F2618B2E1DF2BA6500CB0605 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618B2D1DF2BA6500CB0605 /* main.m */; };
 		F2618B311DF2BA6500CB0605 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618B301DF2BA6500CB0605 /* AppDelegate.m */; };
 		F2618B341DF2BA6500CB0605 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618B331DF2BA6500CB0605 /* ViewController.m */; };
 		F2618B371DF2BA6500CB0605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2618B351DF2BA6500CB0605 /* Main.storyboard */; };
 		F2618B391DF2BA6500CB0605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2618B381DF2BA6500CB0605 /* Assets.xcassets */; };
 		F2618B3C1DF2BA6500CB0605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2618B3A1DF2BA6500CB0605 /* LaunchScreen.storyboard */; };
-		F2618B451DF2BBB400CB0605 /* CMLoginRegisterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618B441DF2BBB400CB0605 /* CMLoginRegisterManager.m */; };
 		F2618C1D1DF2C2DB00CB0605 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618BC41DF2C2DB00CB0605 /* AFHTTPSessionManager.m */; };
 		F2618C1E1DF2C2DB00CB0605 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618BC71DF2C2DB00CB0605 /* AFNetworkReachabilityManager.m */; };
 		F2618C1F1DF2C2DB00CB0605 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618BC91DF2C2DB00CB0605 /* AFSecurityPolicy.m */; };
@@ -59,28 +61,32 @@
 		F2618C461DF2C2DB00CB0605 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618C1A1DF2C2DB00CB0605 /* UIImageView+WebCache.m */; };
 		F2618C471DF2C2DB00CB0605 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618C1C1DF2C2DB00CB0605 /* UIView+WebCacheOperation.m */; };
 		F2618C4A1DF2EADF00CB0605 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2618C491DF2EADF00CB0605 /* libsqlite3.0.tbd */; };
-		F2618C4D1DF3BB8400CB0605 /* CMViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618C4C1DF3BB8400CB0605 /* CMViewControllerManager.m */; };
-		F2618C501DF3BB9D00CB0605 /* CMShowHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2618C4F1DF3BB9D00CB0605 /* CMShowHUDManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F2055AB61E2C5C3700ABF746 /* CMScanQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMScanQRCodeManager.h; sourceTree = "<group>"; };
-		F2055AB71E2C5C3700ABF746 /* CMScanQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMScanQRCodeManager.m; sourceTree = "<group>"; };
 		F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shakeMusic.wav; sourceTree = "<group>"; };
 		F2055ABB1E2CAF5700ABF746 /* beep.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.ogg; sourceTree = "<group>"; };
 		F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = qrcode_found.wav; sourceTree = "<group>"; };
-		F2506ED11E1B3B370080D0EB /* CMCameraManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCameraManger.h; path = ComponentManager/CMCameraManger.h; sourceTree = "<group>"; };
-		F2506ED21E1B3B370080D0EB /* CMCameraManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCameraManger.m; path = ComponentManager/CMCameraManger.m; sourceTree = "<group>"; };
-		F2506ED31E1B3B370080D0EB /* CMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMKeyboardManager.h; path = ComponentManager/CMKeyboardManager.h; sourceTree = "<group>"; };
-		F2506ED41E1B3B370080D0EB /* CMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMKeyboardManager.m; path = ComponentManager/CMKeyboardManager.m; sourceTree = "<group>"; };
-		F2506ED51E1B3B370080D0EB /* CMPushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMPushManager.h; path = ComponentManager/CMPushManager.h; sourceTree = "<group>"; };
-		F2506ED61E1B3B370080D0EB /* CMPushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMPushManager.m; path = ComponentManager/CMPushManager.m; sourceTree = "<group>"; };
-		F2506ED71E1B3B370080D0EB /* CMQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMQRCodeManager.h; path = ComponentManager/CMQRCodeManager.h; sourceTree = "<group>"; };
-		F2506ED81E1B3B370080D0EB /* CMQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMQRCodeManager.m; path = ComponentManager/CMQRCodeManager.m; sourceTree = "<group>"; };
-		F2506ED91E1B3B370080D0EB /* CMTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMTimerManager.h; path = ComponentManager/CMTimerManager.h; sourceTree = "<group>"; };
-		F2506EDA1E1B3B370080D0EB /* CMTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMTimerManager.m; path = ComponentManager/CMTimerManager.m; sourceTree = "<group>"; };
-		F2506EE01E1B3BBA0080D0EB /* CMImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMImageManager.h; sourceTree = "<group>"; };
-		F2506EE11E1B3BBA0080D0EB /* CMImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMImageManager.m; sourceTree = "<group>"; };
+		F210720E1E6E617F00D7695D /* CMCameraManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCameraManger.h; sourceTree = "<group>"; };
+		F210720F1E6E617F00D7695D /* CMCameraManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCameraManger.m; sourceTree = "<group>"; };
+		F21072101E6E617F00D7695D /* CMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMKeyboardManager.h; sourceTree = "<group>"; };
+		F21072111E6E617F00D7695D /* CMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMKeyboardManager.m; sourceTree = "<group>"; };
+		F21072121E6E617F00D7695D /* CMLoginRegisterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLoginRegisterManager.h; sourceTree = "<group>"; };
+		F21072131E6E617F00D7695D /* CMLoginRegisterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMLoginRegisterManager.m; sourceTree = "<group>"; };
+		F21072141E6E617F00D7695D /* CMPushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPushManager.h; sourceTree = "<group>"; };
+		F21072151E6E617F00D7695D /* CMPushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPushManager.m; sourceTree = "<group>"; };
+		F21072161E6E617F00D7695D /* CMQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQRCodeManager.h; sourceTree = "<group>"; };
+		F21072171E6E617F00D7695D /* CMQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQRCodeManager.m; sourceTree = "<group>"; };
+		F21072181E6E617F00D7695D /* CMScanQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMScanQRCodeManager.h; sourceTree = "<group>"; };
+		F21072191E6E617F00D7695D /* CMScanQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMScanQRCodeManager.m; sourceTree = "<group>"; };
+		F210721A1E6E617F00D7695D /* CMShowHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMShowHUDManager.h; sourceTree = "<group>"; };
+		F210721B1E6E617F00D7695D /* CMShowHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMShowHUDManager.m; sourceTree = "<group>"; };
+		F210721C1E6E617F00D7695D /* CMTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTimerManager.h; sourceTree = "<group>"; };
+		F210721D1E6E617F00D7695D /* CMTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTimerManager.m; sourceTree = "<group>"; };
+		F210721E1E6E617F00D7695D /* CMViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMViewControllerManager.h; sourceTree = "<group>"; };
+		F210721F1E6E617F00D7695D /* CMViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMViewControllerManager.m; sourceTree = "<group>"; };
+		F21072291E6E61D700D7695D /* CMImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMImageManager.h; sourceTree = "<group>"; };
+		F210722A1E6E61D700D7695D /* CMImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMImageManager.m; sourceTree = "<group>"; };
 		F2618B291DF2BA6500CB0605 /* ComponentManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2618B2D1DF2BA6500CB0605 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2618B2F1DF2BA6500CB0605 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,8 +97,6 @@
 		F2618B381DF2BA6500CB0605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2618B3B1DF2BA6500CB0605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2618B3D1DF2BA6500CB0605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2618B431DF2BBB400CB0605 /* CMLoginRegisterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMLoginRegisterManager.h; path = ComponentManager/CMLoginRegisterManager.h; sourceTree = "<group>"; };
-		F2618B441DF2BBB400CB0605 /* CMLoginRegisterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMLoginRegisterManager.m; path = ComponentManager/CMLoginRegisterManager.m; sourceTree = "<group>"; };
 		F2618BC31DF2C2DB00CB0605 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		F2618BC41DF2C2DB00CB0605 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		F2618BC51DF2C2DB00CB0605 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -169,10 +173,6 @@
 		F2618C1B1DF2C2DB00CB0605 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		F2618C1C1DF2C2DB00CB0605 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		F2618C491DF2EADF00CB0605 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		F2618C4B1DF3BB8400CB0605 /* CMViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMViewControllerManager.h; path = ComponentManager/CMViewControllerManager.h; sourceTree = "<group>"; };
-		F2618C4C1DF3BB8400CB0605 /* CMViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMViewControllerManager.m; path = ComponentManager/CMViewControllerManager.m; sourceTree = "<group>"; };
-		F2618C4E1DF3BB9D00CB0605 /* CMShowHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMShowHUDManager.h; path = ComponentManager/CMShowHUDManager.h; sourceTree = "<group>"; };
-		F2618C4F1DF3BB9D00CB0605 /* CMShowHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMShowHUDManager.m; path = ComponentManager/CMShowHUDManager.m; sourceTree = "<group>"; };
 		F2CB57021E2DCF2F00B6F883 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -188,6 +188,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F210720D1E6E617F00D7695D /* ComponentManager */ = {
+			isa = PBXGroup;
+			children = (
+				F21072291E6E61D700D7695D /* CMImageManager.h */,
+				F210722A1E6E61D700D7695D /* CMImageManager.m */,
+				F210720E1E6E617F00D7695D /* CMCameraManger.h */,
+				F210720F1E6E617F00D7695D /* CMCameraManger.m */,
+				F21072101E6E617F00D7695D /* CMKeyboardManager.h */,
+				F21072111E6E617F00D7695D /* CMKeyboardManager.m */,
+				F21072121E6E617F00D7695D /* CMLoginRegisterManager.h */,
+				F21072131E6E617F00D7695D /* CMLoginRegisterManager.m */,
+				F21072141E6E617F00D7695D /* CMPushManager.h */,
+				F21072151E6E617F00D7695D /* CMPushManager.m */,
+				F21072161E6E617F00D7695D /* CMQRCodeManager.h */,
+				F21072171E6E617F00D7695D /* CMQRCodeManager.m */,
+				F21072181E6E617F00D7695D /* CMScanQRCodeManager.h */,
+				F21072191E6E617F00D7695D /* CMScanQRCodeManager.m */,
+				F210721A1E6E617F00D7695D /* CMShowHUDManager.h */,
+				F210721B1E6E617F00D7695D /* CMShowHUDManager.m */,
+				F210721C1E6E617F00D7695D /* CMTimerManager.h */,
+				F210721D1E6E617F00D7695D /* CMTimerManager.m */,
+				F210721E1E6E617F00D7695D /* CMViewControllerManager.h */,
+				F210721F1E6E617F00D7695D /* CMViewControllerManager.m */,
+			);
+			path = ComponentManager;
+			sourceTree = "<group>";
+		};
 		F2618B201DF2BA6500CB0605 = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +242,6 @@
 				F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */,
 				F2055ABB1E2CAF5700ABF746 /* beep.ogg */,
 				F2618B331DF2BA6500CB0605 /* ViewController.m */,
-				F2618B461DF2BBBC00CB0605 /* ComponentManager */,
 				F2618BC01DF2C2DB00CB0605 /* ThirdLibrary */,
 				F2618B351DF2BA6500CB0605 /* Main.storyboard */,
 				F2618B381DF2BA6500CB0605 /* Assets.xcassets */,
@@ -234,36 +260,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F2618B461DF2BBBC00CB0605 /* ComponentManager */ = {
-			isa = PBXGroup;
-			children = (
-				F2618C4E1DF3BB9D00CB0605 /* CMShowHUDManager.h */,
-				F2618C4F1DF3BB9D00CB0605 /* CMShowHUDManager.m */,
-				F2618B431DF2BBB400CB0605 /* CMLoginRegisterManager.h */,
-				F2618B441DF2BBB400CB0605 /* CMLoginRegisterManager.m */,
-				F2618C4B1DF3BB8400CB0605 /* CMViewControllerManager.h */,
-				F2618C4C1DF3BB8400CB0605 /* CMViewControllerManager.m */,
-				F2506ED11E1B3B370080D0EB /* CMCameraManger.h */,
-				F2506ED21E1B3B370080D0EB /* CMCameraManger.m */,
-				F2506ED31E1B3B370080D0EB /* CMKeyboardManager.h */,
-				F2506ED41E1B3B370080D0EB /* CMKeyboardManager.m */,
-				F2506ED51E1B3B370080D0EB /* CMPushManager.h */,
-				F2506ED61E1B3B370080D0EB /* CMPushManager.m */,
-				F2506ED71E1B3B370080D0EB /* CMQRCodeManager.h */,
-				F2506ED81E1B3B370080D0EB /* CMQRCodeManager.m */,
-				F2055AB61E2C5C3700ABF746 /* CMScanQRCodeManager.h */,
-				F2055AB71E2C5C3700ABF746 /* CMScanQRCodeManager.m */,
-				F2506ED91E1B3B370080D0EB /* CMTimerManager.h */,
-				F2506EDA1E1B3B370080D0EB /* CMTimerManager.m */,
-				F2506EE01E1B3BBA0080D0EB /* CMImageManager.h */,
-				F2506EE11E1B3BBA0080D0EB /* CMImageManager.m */,
-			);
-			name = ComponentManager;
-			sourceTree = "<group>";
-		};
 		F2618BC01DF2C2DB00CB0605 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				F210720D1E6E617F00D7695D /* ComponentManager */,
 				F2618BC11DF2C2DB00CB0605 /* AFNetworking */,
 				F2618BE71DF2C2DB00CB0605 /* FMDB */,
 				F2618BF71DF2C2DB00CB0605 /* MBProgressHUD */,
@@ -498,19 +498,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2506EDC1E1B3B370080D0EB /* CMKeyboardManager.m in Sources */,
 				F2618C401DF2C2DB00CB0605 /* SDWebImageManager.m in Sources */,
 				F2618C411DF2C2DB00CB0605 /* SDWebImagePrefetcher.m in Sources */,
-				F2506EDD1E1B3B370080D0EB /* CMPushManager.m in Sources */,
 				F2618C471DF2C2DB00CB0605 /* UIView+WebCacheOperation.m in Sources */,
+				F21072271E6E617F00D7695D /* CMTimerManager.m in Sources */,
 				F2618C2B1DF2C2DB00CB0605 /* UIProgressView+AFNetworking.m in Sources */,
 				F2618C291DF2C2DB00CB0605 /* UIButton+AFNetworking.m in Sources */,
 				F2618C2C1DF2C2DB00CB0605 /* UIRefreshControl+AFNetworking.m in Sources */,
+				F21072251E6E617F00D7695D /* CMScanQRCodeManager.m in Sources */,
 				F2618C201DF2C2DB00CB0605 /* AFURLRequestSerialization.m in Sources */,
+				F210722B1E6E61D700D7695D /* CMImageManager.m in Sources */,
 				F2618C3F1DF2C2DB00CB0605 /* SDWebImageDownloaderOperation.m in Sources */,
 				F2618B341DF2BA6500CB0605 /* ViewController.m in Sources */,
-				F2618C4D1DF3BB8400CB0605 /* CMViewControllerManager.m in Sources */,
-				F2618B451DF2BBB400CB0605 /* CMLoginRegisterManager.m in Sources */,
 				F2618B311DF2BA6500CB0605 /* AppDelegate.m in Sources */,
 				F2618C451DF2C2DB00CB0605 /* UIImageView+HighlightedWebCache.m in Sources */,
 				F2618C301DF2C2DB00CB0605 /* FMDatabase.m in Sources */,
@@ -520,31 +519,32 @@
 				F2618C321DF2C2DB00CB0605 /* FMDatabasePool.m in Sources */,
 				F2618C431DF2C2DB00CB0605 /* UIImage+GIF.m in Sources */,
 				F2618C1E1DF2C2DB00CB0605 /* AFNetworkReachabilityManager.m in Sources */,
+				F21072211E6E617F00D7695D /* CMKeyboardManager.m in Sources */,
 				F2618C341DF2C2DB00CB0605 /* FMResultSet.m in Sources */,
 				F2618C251DF2C2DB00CB0605 /* AFAutoPurgingImageCache.m in Sources */,
 				F2618C461DF2C2DB00CB0605 /* UIImageView+WebCache.m in Sources */,
-				F2506EDF1E1B3B370080D0EB /* CMTimerManager.m in Sources */,
-				F2506EE21E1B3BBA0080D0EB /* CMImageManager.m in Sources */,
 				F2618C421DF2C2DB00CB0605 /* UIButton+WebCache.m in Sources */,
+				F21072231E6E617F00D7695D /* CMPushManager.m in Sources */,
 				F2618C3E1DF2C2DB00CB0605 /* SDWebImageDownloader.m in Sources */,
 				F2618C441DF2C2DB00CB0605 /* UIImage+MultiFormat.m in Sources */,
-				F2055AB81E2C5C3700ABF746 /* CMScanQRCodeManager.m in Sources */,
+				F21072201E6E617F00D7695D /* CMCameraManger.m in Sources */,
 				F2618C1F1DF2C2DB00CB0605 /* AFSecurityPolicy.m in Sources */,
-				F2506EDE1E1B3B370080D0EB /* CMQRCodeManager.m in Sources */,
 				F2618C331DF2C2DB00CB0605 /* FMDatabaseQueue.m in Sources */,
 				F2618C1D1DF2C2DB00CB0605 /* AFHTTPSessionManager.m in Sources */,
+				F21072241E6E617F00D7695D /* CMQRCodeManager.m in Sources */,
 				F2618C3C1DF2C2DB00CB0605 /* SDWebImageCompat.m in Sources */,
+				F21072221E6E617F00D7695D /* CMLoginRegisterManager.m in Sources */,
 				F2618C261DF2C2DB00CB0605 /* AFImageDownloader.m in Sources */,
 				F2618C3D1DF2C2DB00CB0605 /* SDWebImageDecoder.m in Sources */,
 				F2618C3B1DF2C2DB00CB0605 /* SDImageCache.m in Sources */,
 				F2618C2D1DF2C2DB00CB0605 /* UIWebView+AFNetworking.m in Sources */,
-				F2506EDB1E1B3B370080D0EB /* CMCameraManger.m in Sources */,
 				F2618B2E1DF2BA6500CB0605 /* main.m in Sources */,
 				F2618C281DF2C2DB00CB0605 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				F21072281E6E617F00D7695D /* CMViewControllerManager.m in Sources */,
 				F2618C271DF2C2DB00CB0605 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F2618C3A1DF2C2DB00CB0605 /* NSData+ImageContentType.m in Sources */,
 				F2618C311DF2C2DB00CB0605 /* FMDatabaseAdditions.m in Sources */,
-				F2618C501DF3BB9D00CB0605 /* CMShowHUDManager.m in Sources */,
+				F21072261E6E617F00D7695D /* CMShowHUDManager.m in Sources */,
 				F2618C361DF2C2DB00CB0605 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
