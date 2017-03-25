@@ -12,7 +12,11 @@
 
 @property (nonatomic, strong) UIToolbar *toolBar;
 
+@property (nonatomic, strong) NSMutableArray<id<UITextInput>> *keyBoardViews;
+
 @end
+
+
 
 @implementation CMKeyboardManager
 
@@ -20,6 +24,44 @@
     CMKeyboardManager *manager = [[super alloc] init];
     return manager;
 }
+
+- (NSMutableArray<id<UITextInput>> *)keyBoardViews {
+    if (_keyBoardViews == nil) {
+        _keyBoardViews = [NSMutableArray arrayWithCapacity: 5];
+    }
+    return _keyBoardViews;
+}
+
+#pragma mark- 注册键盘视图
+- (void)registerKeyboardView:(id<UITextInput>)view {
+    if (![self.keyBoardViews containsObject: view]) {
+        [self.keyBoardViews addObject: view];
+    }
+}
+
+#pragma mark- 删除单个键盘视图
+- (void)removeKeyboardView:(id<UITextInput>)view {
+    [self.keyBoardViews removeObject: view];
+}
+
+#pragma mark- 删除所有键盘视图
+- (void)removeAllKeyboardView {
+    [self.keyBoardViews removeAllObjects];
+}
+
+#pragma mark- 查找第一响应者
+- (id<UITextInput>)firstResponder {
+    __block id <UITextInput> firstResponderView = nil;
+    [self.keyBoardViews enumerateObjectsUsingBlock:^(id<UITextInput>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIView *view = (UIView *)obj;
+        if ([view isFirstResponder]) {
+            firstResponderView = obj;
+            *stop = YES;
+        }
+    }];
+    return  firstResponderView;
+}
+
 
 #pragma mark- 为 view 添加 工具栏, view 必须是输入控件
 - (void) hideKeyboardForView:(UIView *)view {
@@ -63,7 +105,7 @@
 - (void)removeKeyboardNotification {
     [[NSNotificationCenter defaultCenter] removeObserver: self name:UIKeyboardWillShowNotification object: nil];
     [[NSNotificationCenter defaultCenter] removeObserver: self name:UIKeyboardWillHideNotification object: nil];
-
+    
 }
 
 - (void) keyboardWillShow: (NSNotification *)notification {
