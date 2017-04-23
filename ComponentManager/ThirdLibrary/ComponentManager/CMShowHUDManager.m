@@ -49,7 +49,7 @@
     // 在主线程中进行
     MBProgressHUD *hud = [self defaultWindowHUD];
     if (message) {
-        hud.label.text = message;
+        hud.detailsLabel.text = message;
     }
 }
 
@@ -63,15 +63,15 @@
     // 在主线程中进行
     MBProgressHUD *hud = [self defaultWindowHUD];
     hud.mode = MBProgressHUDModeText;
-    hud.label.text = message;
+    hud.detailsLabel.text = message;
     [hud hideAnimated:YES afterDelay: timeInterval];
 }
 
 - (void)showErrorHUDWith:(NSString *)message afterDelay:(NSTimeInterval)timeInterval {
     MBProgressHUD *hud = [self defaultWindowHUD];
     hud.mode = MBProgressHUDModeText;
-    hud.label.text = message;
-    hud.label.textColor = [UIColor redColor];
+    hud.detailsLabel.text = message;
+    hud.detailsLabel.textColor = [UIColor redColor];
     // Move to bottm center.
     [hud hideAnimated:YES afterDelay: timeInterval];
 }
@@ -87,14 +87,14 @@
     hud.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:0.1f];
     if (message) {
-        hud.label.text = message;
+        hud.detailsLabel.text = message;
     }
 }
 
 #pragma mark- 带回调的警告框
 - (void)showAlertErrorWith:(NSString *)title message:(NSString *)message  completed:(void (^)(NSInteger))completion {
     
-    __weak typeof(self)weakSelf = self;
+    WEAK_SELF;
     weakSelf.completion = completion;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: message preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction: [UIAlertAction actionWithTitle: @"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -110,7 +110,7 @@
 #pragma mark- 展示多个 alert 选项
 - (void)showAlertWith:(NSString *)title message:(NSString *)message actions:(NSArray<NSDictionary<NSString *,id> *> *)actions completed:(void (^)(NSInteger))completion {
     
-    __weak typeof(self)weakSelf = self;
+    WEAK_SELF;
     weakSelf.completion = completion;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: message preferredStyle: UIAlertControllerStyleAlert];
     
@@ -132,7 +132,7 @@
 
 #pragma mark- 展示 actionSheet
 - (void)showActionSheetWith:(NSString *)title message:(NSString *)message actions:(NSArray<NSDictionary<NSString *,id> *> *)actions completed:(void (^)(NSInteger))completion {
-    __weak typeof(self)weakSelf = self;
+    WEAK_SELF;
     weakSelf.completion = completion;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title message: message preferredStyle: UIAlertControllerStyleActionSheet];
     
@@ -156,7 +156,7 @@
     
     MBProgressHUD *hud = [self createHUDForView: view];
     if (message) {
-        hud.label.text = message;
+        hud.detailsLabel.text = message;
     }
 }
 
@@ -167,15 +167,15 @@
 - (void)showViewHUD:(UIView *)view message:(NSString *)message afterDelay:(NSTimeInterval)timeInterval {
     MBProgressHUD *hud = [self createHUDForView: view];
     hud.mode = MBProgressHUDModeText;
-    hud.label.text = message;
+    hud.detailsLabel.text = message;
     [hud hideAnimated:YES afterDelay: timeInterval];
 }
 
 - (void)showErrorViewHUD:(UIView *)view message:(NSString *)message afterDelay:(NSTimeInterval)timeInterval {
     MBProgressHUD *hud = [self createHUDForView: view];
     hud.mode = MBProgressHUDModeText;
-    hud.label.text = message;
-    hud.label.textColor = [UIColor redColor];
+    hud.detailsLabel.text = message;
+    hud.detailsLabel.textColor = [UIColor redColor];
     [hud hideAnimated:YES afterDelay: timeInterval];
     
 }
@@ -186,7 +186,7 @@
     hud.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:0.1f];
     if (message) {
-        hud.label.text = message;
+        hud.detailsLabel.text = message;
     }
 }
 
@@ -194,8 +194,11 @@
     // 先为 view 隐藏
     [self hideViewHUD: view];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo: view animated: YES];
+    
     return hud;
 }
-
+-(void)dealloc {
+    NSLog(@"提示器挂了..挂了");
+}
 @end
 

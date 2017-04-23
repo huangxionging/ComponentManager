@@ -71,4 +71,8 @@
     
 }
 
+-(void)dealloc {
+    NSLog(@"注册登录挂了..挂了");
+}
+
 @end

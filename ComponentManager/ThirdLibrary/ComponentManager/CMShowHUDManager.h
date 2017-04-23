@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+
 /**
  必须要引入的类
  */

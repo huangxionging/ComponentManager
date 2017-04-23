@@ -1,9 +1,9 @@
 //
 //  CMCameraManger.m
-//  Hydrodent
+//  32TeethDoc
 //
 //  Created by huangxiong on 2016/12/7.
-//  Copyright © 2016年 xiaoli. All rights reserved.
+//  Copyright © 2016年 huangxiong. All rights reserved.
 //
 
 #import "CMCameraManger.h"
@@ -76,7 +76,7 @@
     // 拍摄视频
     if (self.acton.mediaTypes) {
         self.imagePickerController.mediaTypes = self.acton.mediaTypes;
-        
+
     }
     [self.acton.viewController presentViewController: self.imagePickerController animated: YES completion:^{
         
@@ -97,10 +97,9 @@
     
     // 保存到相册里面
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-        
         CMImageManager *imageManager = [CMImageManager manager];
         imageManager.image = [info objectForKey: UIImagePickerControllerOriginalImage];
-        UIImage *originalImage = [imageManager fixOrientation];
+        UIImage *originalImage = imageManager.fixOrientation;
         
         UIImageWriteToSavedPhotosAlbum(originalImage, self,  @selector(image:didFinishSavingWithError:contextInfo:), nil);
     }
@@ -125,7 +124,32 @@
 }
 
 
+- (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize
+
+{
+    UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
+    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
+    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return reSizeImage;
+    
+}
+
+- (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize
+
+{
+    
+    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * scaleSize, image.size.height *scaleSize));
+    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height * scaleSize)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
+    
+}
+
 - (void)dealloc {
-    NSLog(@"CMImageManager: 挂了----挂了");
+    NSLog(@"CMCameraManager: 挂了----挂了");
 }
 @end
