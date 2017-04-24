@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import "CMViewControllerManager.h"
 
+#define WEAK_SELF __weak typeof(self)weakSelf = self
 
 @interface CMShowHUDManager ()
 
