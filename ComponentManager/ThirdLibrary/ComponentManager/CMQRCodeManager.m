@@ -44,5 +44,7 @@
     return codeImage;
 
 }
-
+-(void)dealloc {
+    NSLog(@"二维码生成器挂了..挂了");
+}
 @end

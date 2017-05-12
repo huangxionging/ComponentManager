@@ -18,7 +18,7 @@
 
 /**
  管理器
- 
+
  @return 管理器对象
  */
 + (instancetype)manager;
@@ -35,14 +35,14 @@
 
 /**
  为输入视图注册
- 
+
  @param view 待注册的视图
  */
 - (void) registerKeyboardView: (id<UITextInput>) view;
 
 /**
  删除键盘响应者
- 
+
  @param view 视图
  */
 - (void) removeKeyboardView: (id<UITextInput>) view;
@@ -53,22 +53,22 @@
 - (void) removeAllKeyboardView;
 
 /**
- 获取第一响应者, 必须是被注册过的才有
- 
+ 获取第一响应者, 必须是被注册过的才有, 而且必须在键盘弹出的时候
+
  @return 第一响应者
  */
 - (id<UITextInput>) firstResponder;
 
 /**
  为输入控件添加收键盘的 view
- 
+
  @param view 待添加的 view(输入控件, UITextField, UITextView)
  */
 - (void) hideKeyboardForView: (UIView *)view;
 
 /**
  隐藏键盘
- 
+
  @param sender 隐藏键盘
  */
 - (void) hideKeyboard: (UIBarButtonItem *) sender;

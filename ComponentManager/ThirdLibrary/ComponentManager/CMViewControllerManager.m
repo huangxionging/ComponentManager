@@ -84,6 +84,8 @@
     
     return result;
 }
-
+-(void)dealloc {
+    NSLog(@"CMViewControllerManager挂了..挂了");
+}
 
 @end
