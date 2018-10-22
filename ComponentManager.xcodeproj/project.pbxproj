@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34E93398217D9C3B002D37B9 /* CMStringManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E93397217D9C3B002D37B9 /* CMStringManager.m */; };
 		F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */; };
 		F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */; };
 		F21072201E6E617F00D7695D /* CMCameraManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F210720F1E6E617F00D7695D /* CMCameraManger.m */; };
@@ -76,6 +77,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34E93396217D9C3B002D37B9 /* CMStringManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMStringManager.h; sourceTree = "<group>"; };
+		34E93397217D9C3B002D37B9 /* CMStringManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMStringManager.m; sourceTree = "<group>"; };
 		F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shakeMusic.wav; sourceTree = "<group>"; };
 		F2055ABB1E2CAF5700ABF746 /* beep.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.ogg; sourceTree = "<group>"; };
 		F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = qrcode_found.wav; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				F210721D1E6E617F00D7695D /* CMTimerManager.m */,
 				F210721E1E6E617F00D7695D /* CMViewControllerManager.h */,
 				F210721F1E6E617F00D7695D /* CMViewControllerManager.m */,
+				34E93396217D9C3B002D37B9 /* CMStringManager.h */,
+				34E93397217D9C3B002D37B9 /* CMStringManager.m */,
 			);
 			path = ComponentManager;
 			sourceTree = "<group>";
@@ -673,6 +678,7 @@
 				F2618C3B1DF2C2DB00CB0605 /* SDImageCache.m in Sources */,
 				F2618C2D1DF2C2DB00CB0605 /* UIWebView+AFNetworking.m in Sources */,
 				F2618B2E1DF2BA6500CB0605 /* main.m in Sources */,
+				34E93398217D9C3B002D37B9 /* CMStringManager.m in Sources */,
 				F2618C281DF2C2DB00CB0605 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F21072281E6E617F00D7695D /* CMViewControllerManager.m in Sources */,
 				F2618C271DF2C2DB00CB0605 /* AFNetworkActivityIndicatorManager.m in Sources */,
