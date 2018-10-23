@@ -12,6 +12,15 @@
 
 @implementation CMStringManager
 
+#pragma mark- 共享的单例
++ (instancetype)shareManager {
+    static CMStringManager *stringManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        stringManager = [[super alloc] init];
+    });
+    return stringManager;
+}
 
 #pragma mark - md5 方法
 - (NSString *) getMD5String:(NSString *)original {
@@ -32,19 +41,11 @@
 
 #pragma mark - URL 方法
 - (NSString*)decodeURL:(NSString *)url{
-    NSString*decodedString= (__bridge_transfer NSString*)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (__bridge CFStringRef)url, CFSTR(""), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
-
-    return decodedString;
+    return [url stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 - (NSString *)encodeURL: (NSString *)url {
-    NSString *encodedString = (NSString *)
-    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)url, NULL, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", kCFStringEncodingUTF8));
-
-    if (!encodedString) {
-        encodedString = @"";
-    }
-    return encodedString;
+    return  [url stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 
@@ -100,6 +101,137 @@
 - (CGSize) sizeWithText:(NSString *)text width: (CGFloat)width height: (CGFloat)height systemFontSize: (CGFloat)fontSize {
 
     return [text boundingRectWithSize: CGSizeMake(width, height) options:NSStringDrawingUsesLineFragmentOrigin attributes: @{NSFontAttributeName :[UIFont systemFontOfSize: fontSize]} context: nil].size;
+}
+
+#pragma mark -将对象转化为字符串
+- (NSString *)stringFromObject:(id)object {
+    return [NSString stringWithFormat: @"%@", object];
+}
+
+#pragma mark -16进制相关
+- (NSString *) hexStringFromBytes:(Byte *)bytes length: (NSInteger)length {
+    NSMutableString *hexString = [NSMutableString stringWithString: @"0x"];
+    for (NSInteger index =0; index < length; ++index) {
+        [hexString appendFormat: @"%02x", bytes[index]];
+    }
+    return hexString;
+}
+
+- (NSString *) hexStringFromData:(NSData *) data {
+    NSInteger length = data.length;
+    Byte *bytes = (Byte *)[data bytes];
+    return [self hexStringFromBytes: bytes length: length];
+}
+
+- (Byte *) bytesFromHexString: (NSString *)hexString {
+    if (![hexString hasPrefix: @"0x"]) {
+        hexString = [NSString stringWithFormat: @"0x%@", hexString];
+    }
+
+    // 求长度
+    NSUInteger length = hexString.length / 2 - 1;
+
+    // 创建字节数组
+    Byte *bytes = (Byte *)malloc(sizeof(Byte) *length);
+    memset(bytes, 0, length);
+    // 转换成小写
+    NSString *lowcaseString = [hexString lowercaseString];
+
+    // for loop 开始转换
+    for (NSInteger index = 2; index < lowcaseString.length; index+=2) {
+        // 获取高位字符
+        char highChar = [lowcaseString characterAtIndex: index];
+        // 获取低位字符
+        char lowChar = [lowcaseString characterAtIndex: index + 1];
+        // 将字符转换为10进制整数
+        NSInteger highValue = [self integerFromHexChar: highChar];
+        NSInteger lowValue = [self integerFromHexChar: lowChar];
+        bytes[index / 2 - 1] = highValue * 16 + lowValue;
+    }
+    return bytes;
+}
+
+- (NSInteger)integerFromHexChar:(char)hexChar {
+    if (hexChar >= '0' && hexChar <= '9') {
+        return hexChar - 48;
+    } else if (hexChar >= 'a' && hexChar <= 'f') {
+        // 'a' 是 97, 但表示 10, 所以 hexChar - 97 + 10 = hexChar - 87
+        return hexChar - 87;
+    } else if (hexChar >= 'A' && hexChar <= 'F') {
+        // 'A' 是 65, 但表示 10, 所以 hexChar - 65 + 10 = hexChar - 55
+        return hexChar - 65 + 10;
+    }
+    return NSNotFound;
+}
+
+- (NSData *)dataFromHexString:(NSString *)hexString {
+    if (![hexString hasPrefix: @"0x"]) {
+        hexString = [NSString stringWithFormat: @"0x%@", hexString];
+    }
+    Byte *bytes = [self bytesFromHexString: hexString];
+    return [NSData dataWithBytes: bytes length: hexString.length / 2 - 1];
+}
+
+- (NSString *) stringFromHexAscii: (NSString *)hexAscii {
+
+    NSInteger hexLength = hexAscii.length;
+    // 16 进制字符串都是偶数个
+    if (hexLength % 2 != 0) {
+        return nil;
+    }
+    if (![hexAscii hasPrefix: @"0x"]) {
+        hexAscii = [NSString stringWithFormat: @"0x%@", hexAscii];
+    }
+    NSMutableString *string = [NSMutableString string];
+    for (NSInteger index = 2; index < hexAscii.length; index += 2) {
+        NSString *sub = [hexAscii substringWithRange: NSMakeRange(index, 2)];
+        // 获得 对应的字符
+        char value = (char)[self integerFromHexString: sub];
+        // 拼接字符串
+        [string appendFormat: @"%c", value];
+
+    }
+    return string;
+}
+
+- (NSInteger)integerFromHexString: (NSString *)hexString {
+    // 添加 0x 前缀
+    if (![hexString hasPrefix: @"0x"]) {
+        hexString = [NSString stringWithFormat: @"0x%@", hexString];
+    }
+
+    // 得到长度
+    NSInteger leng = hexString.length / 2 - 1;
+
+    // 获得字节
+    Byte *bytes = [self bytesFromHexString: hexString];
+
+    // 获取结果
+    NSInteger sum = 0;
+    for (NSInteger index = leng - 1; index >= 0; --index) {
+        sum += bytes[index] * pow(256, leng - index - 1);
+    }
+    free(bytes);
+    return sum;
+}
+
+- (NSString *)parameterStringFromDictionary:(NSDictionary *)dictonary {
+    // 拼接 key=value
+    NSMutableArray *paramArray = [NSMutableArray arrayWithCapacity: 10];
+    for (NSInteger index = 0; index < dictonary.allKeys.count; ++index) {
+        NSString * key = dictonary.allKeys[index];
+        NSString * value = [self stringFromObject: dictonary[key]];
+        NSString *keyValue = [NSString stringWithFormat:@"%@=%@", key, value];
+        [paramArray addObject: keyValue];
+    }
+    // 对 数组排序, 按字母排序
+    [paramArray sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare: obj2];
+    }];
+
+    NSString *paramString = [paramArray componentsJoinedByString: @"&"];
+    paramArray = nil;
+    return  paramString;
 }
 
 @end

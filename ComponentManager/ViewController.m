@@ -12,6 +12,7 @@
 #import "CMQRCodeManager.h"
 #import "CMScanQRCodeManager.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "CMStringManager.h"
 
 @interface ViewController ()
 
@@ -54,74 +55,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//    [[CMShowHUDManager shareManager] showErrorHUDWith: @"手机号码错误" afterDelay: 2.5f];
-//    [[CMShowHUDManager shareManager] showHUDWith: @"正在加载..."];
-//    // 开别的线程等 5s
-//    dispatch_async(dispatch_get_main_queue(), ^{
-////        sleep(5);
-//        [[CMShowHUDManager shareManager] hideHUD];
-//    });
-//    
-//    [self.keyboardManager hideKeyboardForView: self.textField];
-//    [self.keyboardManager setKeyboardBlock:^(id result, BOOL isShow) {
-//        if (isShow) {
-//            NSLog(@"键盘弹出");
-//            
-//            self.bottom.constant = -312;
-//        } else {
-//            NSLog(@"键盘隐藏");
-//            self.bottom.constant = -37;
-//        }
-//        NSLog(@"%@", result);
-//    }];
-//    
-//    UIImage *image = [CMQRCodeManager encodeWithObject: @{@"key" : @"https://www.baidu.com"} size: CGSizeMake(300, 300)];
-//    self.qrImage.image = image;
-//    NSString *str = [CMQRCodeManager decodeWithImage: image];
-//    NSData *data = [str dataUsingEncoding: NSUTF8StringEncoding];
-//    NSDictionary *dicton = [NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error: nil];
-//    NSString *https = dicton[@"key"];
-//    [[UIApplication sharedApplication] openURL: [NSURL URLWithString: https] options: nil completionHandler:^(BOOL success) {
-//        
-//    }];
-        dispatch_async(dispatch_get_main_queue(), ^{
-    //        sleep(5);
-            CGRect windowSize = self.view.bounds;
-            UIView *view = [UIView new];
-            [self.view addSubview: view];
-            view.frame = CGRectMake(windowSize.size.width / 2 - 100, 100, 200, 200) ;
-            //        self.scanRectView.center = CGPointMake(CGRectGetMidX([UIScreen mainScreen].bounds), CGRectGetMidY([UIScreen mainScreen].bounds));
-            view.layer.borderColor = [UIColor redColor].CGColor;
-            view.layer.borderWidth = 1;
-            
-            __weak typeof(self)weakSelf = self;
-            
-            BOOL available = [weakSelf.scanQRCodeManager cameraAvailable];
-            if (available == NO) {
-                [[CMShowHUDManager shareManager] showAlertWith: nil message: @"请在iPhone\"设置\"选项中允许32teeth医生版访问您的相机" actions: @[@{@"style":@(UIAlertActionStyleCancel), @"title":@"好的"}, @{@"style":@(UIAlertActionStyleDefault), @"title":@"去设置"}] completed:^(NSInteger index) {
-                    if (index == 1) {
-                        NSString *setting = UIApplicationOpenSettingsURLString;
-                        if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString: setting]]) {
-                            [[UIApplication sharedApplication] openURL: [NSURL URLWithString: setting]];
-                        }
-                    }
-                }];
-                return;
-            }
-            [CMScanAction actionWithScanView:self.view validRect: CGRectMake(windowSize.size.width / 2 - 100, 100, 200, 200) metadataObjectTypes: @[] actionBlock:^BOOL(NSString *stringValue) {
-                NSLog(@"%@", stringValue);
-                NSString *strSoundFile = [[NSBundle mainBundle] pathForResource:@"qrcode_found" ofType:@"wav"];
-                [weakSelf.scanQRCodeManager playSoundWithPath: strSoundFile];
-                [[CMShowHUDManager shareManager] showAlertErrorWith: nil message: stringValue completed:^(NSInteger index) {
-                    [weakSelf.scanQRCodeManager startRunning];
-                }];
-                
-                
-                return YES;
-            }];
-        });
-    
+    Byte *bytes = (Byte *)malloc(sizeof(Byte) *10);
+    bytes[0] = 0xe6;
+    bytes[1] = 0x3f;
+    bytes[2] = 0x18;
+    bytes[3] = 0x45;
+    bytes[4] = 0x79;
+    bytes[5] = 0x3a;
+    bytes[6] = 0x4b;
+    bytes[7] = 0x2c;
+    bytes[8] = 0x5d;
+    bytes[9] = 0x0e;
+    NSString *hexString = [[CMStringManager shareManager] hexStringFromBytes: bytes length: 10];
+    NSLog(@"%@", hexString);
+    Byte *byte1 = [[CMStringManager shareManager] bytesFromHexString: hexString];
+    hexString = @"0x4875616E6758696F6e67";
+    NSString *string = [[CMStringManager shareManager] stringFromHexAscii: hexString];
+    NSLog(@"%@", string);
+    NSDictionary *dic = @{@"name": @"huangxiong", @"email":@"huangxionging@163.com", @"sex":@"man"};
+    NSLog(@"%@", [[CMStringManager shareManager] encodeURL: @"http://qnimage.32teeth.cn/窝沟封闭可以帮助儿童预防龋齿_360.mp4"]);
 }
 
 

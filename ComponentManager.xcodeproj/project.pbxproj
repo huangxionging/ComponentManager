@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342C0C63217EFF9D00227D24 /* CMRouteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C62217EFF9D00227D24 /* CMRouteManager.m */; };
+		342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C64217F015400227D24 /* CMDispatchMessageManager.m */; };
 		34E93398217D9C3B002D37B9 /* CMStringManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E93397217D9C3B002D37B9 /* CMStringManager.m */; };
 		F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */; };
 		F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */; };
@@ -77,6 +79,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		342C0C61217EFF9D00227D24 /* CMRouteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouteManager.h; sourceTree = "<group>"; };
+		342C0C62217EFF9D00227D24 /* CMRouteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouteManager.m; sourceTree = "<group>"; };
+		342C0C64217F015400227D24 /* CMDispatchMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDispatchMessageManager.m; sourceTree = "<group>"; };
+		342C0C65217F015400227D24 /* CMDispatchMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDispatchMessageManager.h; sourceTree = "<group>"; };
 		34E93396217D9C3B002D37B9 /* CMStringManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMStringManager.h; sourceTree = "<group>"; };
 		34E93397217D9C3B002D37B9 /* CMStringManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMStringManager.m; sourceTree = "<group>"; };
 		F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shakeMusic.wav; sourceTree = "<group>"; };
@@ -257,6 +263,10 @@
 				F210721F1E6E617F00D7695D /* CMViewControllerManager.m */,
 				34E93396217D9C3B002D37B9 /* CMStringManager.h */,
 				34E93397217D9C3B002D37B9 /* CMStringManager.m */,
+				342C0C61217EFF9D00227D24 /* CMRouteManager.h */,
+				342C0C62217EFF9D00227D24 /* CMRouteManager.m */,
+				342C0C65217F015400227D24 /* CMDispatchMessageManager.h */,
+				342C0C64217F015400227D24 /* CMDispatchMessageManager.m */,
 			);
 			path = ComponentManager;
 			sourceTree = "<group>";
@@ -585,7 +595,7 @@
 		F2618B211DF2BA6500CB0605 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = huangxiong;
 				TargetAttributes = {
 					F2618B281DF2BA6500CB0605 = {
@@ -673,6 +683,7 @@
 				F21072241E6E617F00D7695D /* CMQRCodeManager.m in Sources */,
 				F2618C3C1DF2C2DB00CB0605 /* SDWebImageCompat.m in Sources */,
 				F21072221E6E617F00D7695D /* CMLoginRegisterManager.m in Sources */,
+				342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */,
 				F2618C261DF2C2DB00CB0605 /* AFImageDownloader.m in Sources */,
 				F2618C3D1DF2C2DB00CB0605 /* SDWebImageDecoder.m in Sources */,
 				F2618C3B1DF2C2DB00CB0605 /* SDImageCache.m in Sources */,
@@ -684,6 +695,7 @@
 				F2618C271DF2C2DB00CB0605 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F2618C3A1DF2C2DB00CB0605 /* NSData+ImageContentType.m in Sources */,
 				F2618C311DF2C2DB00CB0605 /* FMDatabaseAdditions.m in Sources */,
+				342C0C63217EFF9D00227D24 /* CMRouteManager.m in Sources */,
 				F21072261E6E617F00D7695D /* CMShowHUDManager.m in Sources */,
 				F2618C361DF2C2DB00CB0605 /* MBProgressHUD.m in Sources */,
 			);
@@ -720,15 +732,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -769,15 +789,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;

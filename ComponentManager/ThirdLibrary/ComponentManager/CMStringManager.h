@@ -14,6 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CMStringManager : NSObject
 
 /**
+ 单例
+
+ @return 共享单例
+ */
++ (instancetype)shareManager;
+
+/**
  对字符串进行 MD5加密
 
  @return 加密结果
@@ -77,6 +84,82 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSDictionary *) getParameterFromURL: (NSString *)url;
 
+
+/**
+ 将对象转换成字符串
+
+ @param object 对象
+ @return 字符串值
+ */
+- (NSString *) stringFromObject:(id)object;
+
+#pragma mark-16进制相关
+/**
+ 16进制字节转换成16进制表示的字符串
+
+ @param bytes 16进制字节
+ @param length 16进制字节数组长度
+ @return 字符串结果, 小写
+ */
+- (NSString *) hexStringFromBytes:(Byte *)bytes length: (NSInteger)length;
+
+/**
+ NSData 转换成 16进制字符串
+
+ @param data NSData
+ @return 16进制数据
+ */
+- (NSString *) hexStringFromData:(NSData *) data;
+
+/**
+ 16进制字符串转换成字节数组
+
+ @param hexString 16进制字符串
+ @return 字节数
+ */
+- (Byte *) bytesFromHexString: (NSString *)hexString;
+
+/**
+ 16进制字符串转换成 NSData
+
+ @param hexString 16进制字符串
+ @return NSData
+ */
+- (NSData *) dataFromHexString: (NSString *)hexString;
+
+/**
+ 16进制表示的 ASCII 码字符串
+
+ @param hexAscii 16进制字符串
+ @return 字符串
+ */
+- (NSString *) stringFromHexAscii: (NSString *)hexAscii;
+
+
+/**
+ 16进制转10进制整数
+
+ @param hexString 16进制字符串
+ @return 返回值
+ */
+- (NSInteger)integerFromHexString: (NSString *)hexString;
+
+
+/**
+ 16进制字符转10进制
+
+ @param hexChar 16进制字符
+ @return 10进制值
+ */
+- (NSInteger)integerFromHexChar:(char)hexChar;
+
+/**
+ 字典转换成参数字符串, 用 & 连接
+
+ @param dictonary 参数字典
+ @return 返回的字符串
+ */
+- (NSString *)parameterStringFromDictionary:(NSDictionary *)dictonary;
 
 @end
 
