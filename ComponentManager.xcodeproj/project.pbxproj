@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		342C0C63217EFF9D00227D24 /* CMRouteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C62217EFF9D00227D24 /* CMRouteManager.m */; };
+		3403188E218001E2003370A7 /* CMRouterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3403188D218001E2003370A7 /* CMRouterHandler.m */; };
+		3403189121801F8E003370A7 /* CMRouterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3403189021801F8E003370A7 /* CMRouterTask.m */; };
+		3403189321804529003370A7 /* url.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3403189221804529003370A7 /* url.plist */; };
 		342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C64217F015400227D24 /* CMDispatchMessageManager.m */; };
+		342C0C71217F21BD00227D24 /* CMRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C6F217F21BD00227D24 /* CMRouterManager.m */; };
+		342C0C74217F223800227D24 /* CMRouterStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C73217F223800227D24 /* CMRouterStorage.m */; };
+		342C0C77217F23CB00227D24 /* CMRouterNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C76217F23CB00227D24 /* CMRouterNavigator.m */; };
+		342C0C7A217F265100227D24 /* CMRouterPresentor.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C79217F265100227D24 /* CMRouterPresentor.m */; };
 		34E93398217D9C3B002D37B9 /* CMStringManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E93397217D9C3B002D37B9 /* CMStringManager.m */; };
 		F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */; };
 		F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */; };
@@ -79,10 +85,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		342C0C61217EFF9D00227D24 /* CMRouteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouteManager.h; sourceTree = "<group>"; };
-		342C0C62217EFF9D00227D24 /* CMRouteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouteManager.m; sourceTree = "<group>"; };
+		3403188C218001E2003370A7 /* CMRouterHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterHandler.h; sourceTree = "<group>"; };
+		3403188D218001E2003370A7 /* CMRouterHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterHandler.m; sourceTree = "<group>"; };
+		3403188F21801F8E003370A7 /* CMRouterTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterTask.h; sourceTree = "<group>"; };
+		3403189021801F8E003370A7 /* CMRouterTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterTask.m; sourceTree = "<group>"; };
+		3403189221804529003370A7 /* url.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = url.plist; sourceTree = "<group>"; };
 		342C0C64217F015400227D24 /* CMDispatchMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDispatchMessageManager.m; sourceTree = "<group>"; };
 		342C0C65217F015400227D24 /* CMDispatchMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDispatchMessageManager.h; sourceTree = "<group>"; };
+		342C0C6F217F21BD00227D24 /* CMRouterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterManager.m; sourceTree = "<group>"; };
+		342C0C70217F21BD00227D24 /* CMRouterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterManager.h; sourceTree = "<group>"; };
+		342C0C72217F223800227D24 /* CMRouterStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterStorage.h; sourceTree = "<group>"; };
+		342C0C73217F223800227D24 /* CMRouterStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterStorage.m; sourceTree = "<group>"; };
+		342C0C75217F23CA00227D24 /* CMRouterNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterNavigator.h; sourceTree = "<group>"; };
+		342C0C76217F23CB00227D24 /* CMRouterNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterNavigator.m; sourceTree = "<group>"; };
+		342C0C78217F265100227D24 /* CMRouterPresentor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterPresentor.h; sourceTree = "<group>"; };
+		342C0C79217F265100227D24 /* CMRouterPresentor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterPresentor.m; sourceTree = "<group>"; };
 		34E93396217D9C3B002D37B9 /* CMStringManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMStringManager.h; sourceTree = "<group>"; };
 		34E93397217D9C3B002D37B9 /* CMStringManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMStringManager.m; sourceTree = "<group>"; };
 		F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shakeMusic.wav; sourceTree = "<group>"; };
@@ -236,6 +253,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		342C0C6B217F213400227D24 /* ComponentRouter */ = {
+			isa = PBXGroup;
+			children = (
+				342C0C70217F21BD00227D24 /* CMRouterManager.h */,
+				342C0C6F217F21BD00227D24 /* CMRouterManager.m */,
+				3403188F21801F8E003370A7 /* CMRouterTask.h */,
+				3403189021801F8E003370A7 /* CMRouterTask.m */,
+				3403188C218001E2003370A7 /* CMRouterHandler.h */,
+				3403188D218001E2003370A7 /* CMRouterHandler.m */,
+				342C0C72217F223800227D24 /* CMRouterStorage.h */,
+				342C0C73217F223800227D24 /* CMRouterStorage.m */,
+				342C0C75217F23CA00227D24 /* CMRouterNavigator.h */,
+				342C0C76217F23CB00227D24 /* CMRouterNavigator.m */,
+				342C0C78217F265100227D24 /* CMRouterPresentor.h */,
+				342C0C79217F265100227D24 /* CMRouterPresentor.m */,
+				3403189221804529003370A7 /* url.plist */,
+			);
+			path = ComponentRouter;
+			sourceTree = "<group>";
+		};
 		F210720D1E6E617F00D7695D /* ComponentManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,8 +300,6 @@
 				F210721F1E6E617F00D7695D /* CMViewControllerManager.m */,
 				34E93396217D9C3B002D37B9 /* CMStringManager.h */,
 				34E93397217D9C3B002D37B9 /* CMStringManager.m */,
-				342C0C61217EFF9D00227D24 /* CMRouteManager.h */,
-				342C0C62217EFF9D00227D24 /* CMRouteManager.m */,
 				342C0C65217F015400227D24 /* CMDispatchMessageManager.h */,
 				342C0C64217F015400227D24 /* CMDispatchMessageManager.m */,
 			);
@@ -319,6 +354,7 @@
 		F2618BC01DF2C2DB00CB0605 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				342C0C6B217F213400227D24 /* ComponentRouter */,
 				F26881751EAD07AC00582C27 /* UMSocial */,
 				F210720D1E6E617F00D7695D /* ComponentManager */,
 				F2618BC11DF2C2DB00CB0605 /* AFNetworking */,
@@ -634,6 +670,7 @@
 				F26881961EAD07AC00582C27 /* UMSocialSDKPromptResources.bundle in Resources */,
 				F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */,
 				F26881981EAD07AC00582C27 /* UMSocialSDKResources.bundle in Resources */,
+				3403189321804529003370A7 /* url.plist in Resources */,
 				F26881931EAD07AC00582C27 /* README.txt in Resources */,
 				F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */,
 			);
@@ -658,21 +695,26 @@
 				F2618C201DF2C2DB00CB0605 /* AFURLRequestSerialization.m in Sources */,
 				F210722B1E6E61D700D7695D /* CMImageManager.m in Sources */,
 				F2618C3F1DF2C2DB00CB0605 /* SDWebImageDownloaderOperation.m in Sources */,
+				342C0C77217F23CB00227D24 /* CMRouterNavigator.m in Sources */,
 				F2618B341DF2BA6500CB0605 /* ViewController.m in Sources */,
 				F2618B311DF2BA6500CB0605 /* AppDelegate.m in Sources */,
 				F2618C451DF2C2DB00CB0605 /* UIImageView+HighlightedWebCache.m in Sources */,
 				F2618C301DF2C2DB00CB0605 /* FMDatabase.m in Sources */,
 				F2618C221DF2C2DB00CB0605 /* AFURLSessionManager.m in Sources */,
 				F2618C211DF2C2DB00CB0605 /* AFURLResponseSerialization.m in Sources */,
+				342C0C7A217F265100227D24 /* CMRouterPresentor.m in Sources */,
 				F2618C2A1DF2C2DB00CB0605 /* UIImageView+AFNetworking.m in Sources */,
 				F2618C321DF2C2DB00CB0605 /* FMDatabasePool.m in Sources */,
 				F2618C431DF2C2DB00CB0605 /* UIImage+GIF.m in Sources */,
 				F2618C1E1DF2C2DB00CB0605 /* AFNetworkReachabilityManager.m in Sources */,
+				342C0C71217F21BD00227D24 /* CMRouterManager.m in Sources */,
 				F21072211E6E617F00D7695D /* CMKeyboardManager.m in Sources */,
 				F2618C341DF2C2DB00CB0605 /* FMResultSet.m in Sources */,
+				3403188E218001E2003370A7 /* CMRouterHandler.m in Sources */,
 				F2618C251DF2C2DB00CB0605 /* AFAutoPurgingImageCache.m in Sources */,
 				F2618C461DF2C2DB00CB0605 /* UIImageView+WebCache.m in Sources */,
 				F2618C421DF2C2DB00CB0605 /* UIButton+WebCache.m in Sources */,
+				3403189121801F8E003370A7 /* CMRouterTask.m in Sources */,
 				F21072231E6E617F00D7695D /* CMPushManager.m in Sources */,
 				F2618C3E1DF2C2DB00CB0605 /* SDWebImageDownloader.m in Sources */,
 				F2618C441DF2C2DB00CB0605 /* UIImage+MultiFormat.m in Sources */,
@@ -686,6 +728,7 @@
 				342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */,
 				F2618C261DF2C2DB00CB0605 /* AFImageDownloader.m in Sources */,
 				F2618C3D1DF2C2DB00CB0605 /* SDWebImageDecoder.m in Sources */,
+				342C0C74217F223800227D24 /* CMRouterStorage.m in Sources */,
 				F2618C3B1DF2C2DB00CB0605 /* SDImageCache.m in Sources */,
 				F2618C2D1DF2C2DB00CB0605 /* UIWebView+AFNetworking.m in Sources */,
 				F2618B2E1DF2BA6500CB0605 /* main.m in Sources */,
@@ -695,7 +738,6 @@
 				F2618C271DF2C2DB00CB0605 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F2618C3A1DF2C2DB00CB0605 /* NSData+ImageContentType.m in Sources */,
 				F2618C311DF2C2DB00CB0605 /* FMDatabaseAdditions.m in Sources */,
-				342C0C63217EFF9D00227D24 /* CMRouteManager.m in Sources */,
 				F21072261E6E617F00D7695D /* CMShowHUDManager.m in Sources */,
 				F2618C361DF2C2DB00CB0605 /* MBProgressHUD.m in Sources */,
 			);

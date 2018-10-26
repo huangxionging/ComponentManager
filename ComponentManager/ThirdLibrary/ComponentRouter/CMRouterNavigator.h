@@ -1,5 +1,5 @@
 //
-//  CMRouteManager.h
+//  CMRouterNavigator.h
 //  ComponentManager
 //
 //  Created by 黄雄 on 2018/10/23.
@@ -7,18 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CMRouterStorage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMRouteManager : NSObject
-/**
- 单例
+@interface CMRouterNavigator : NSObject
 
- @return 共享单例
- */
-+ (instancetype)shareManager;
-
-- 
++ 
 
 @end
 
