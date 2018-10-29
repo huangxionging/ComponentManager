@@ -7,7 +7,21 @@
 //
 
 #import "CMRouterNavigator.h"
+#import <UIKit/UIKit.h>
 
 @implementation CMRouterNavigator
+
+- (void) push {
+    NSObject *navigatior = self.navigatorInfo[@"navigatior"];
+    NSObject *destinator = self.navigatorInfo[@"destinator"];
+
+}
+
+- (void) pop {
+    NSObject *navigatior = self.navigatorInfo[@"navigatior"];
+    NSObject *destinator = self.navigatorInfo[@"destinator"];
+
+
+}
 
 @end

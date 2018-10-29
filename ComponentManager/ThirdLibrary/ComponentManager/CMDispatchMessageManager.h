@@ -36,4 +36,6 @@
  @return 返回调度方法的结果
  */
 - (id) dispatchReturnValueTarget:(id) target method: (NSString *)method, ... NS_REQUIRES_NIL_TERMINATION;
+- (NSInteger) dispatchReturnIntegerTarget:(id) target method: (NSString *)method, ... NS_REQUIRES_NIL_TERMINATION;
+- (BOOL) dispatchReturnBoolTarget:(id) target method: (NSString *)method, ... NS_REQUIRES_NIL_TERMINATION;
 @end

@@ -10,14 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, ) {
-    <#MyEnumValueA#>,
-    <#MyEnumValueB#>,
-    <#MyEnumValueC#>,
-};
-
-
 @interface CMRouterTask : NSObject
+
+/**
+ 
+ */
+@property (nonatomic, copy) NSString *taskClass;
+
+@property (nonatomic, strong) id parameter;
+
+- (void) invoke;
 
 @end
 

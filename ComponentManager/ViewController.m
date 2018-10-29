@@ -13,6 +13,7 @@
 #import "CMScanQRCodeManager.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "CMStringManager.h"
+#import "CMRouterManager.h"
 
 @interface ViewController ()
 
@@ -74,6 +75,11 @@
     NSLog(@"%@", string);
     NSDictionary *dic = @{@"name": @"huangxiong", @"email":@"huangxionging@163.com", @"sex":@"man"};
     NSLog(@"%@", [[CMStringManager shareManager] encodeURL: @"http://qnimage.32teeth.cn/窝沟封闭可以帮助儿童预防龋齿_360.mp4"]);
+    [[CMRouterManager shareManager] router: @"navigateTo://page/my/personal" parameters: nil success:^(id  _Nonnull responseObject) {
+
+    } failure:^(NSError * _Nonnull error) {
+
+    }];
 }
 
 

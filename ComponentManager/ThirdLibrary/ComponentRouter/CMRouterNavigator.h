@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CMRouterStorage.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CMRouterNavigator : NSObject
 
-+ 
+@property (nonatomic, copy) NSDictionary *navigatorInfo;
+
+- (void) invoke;
 
 @end
 

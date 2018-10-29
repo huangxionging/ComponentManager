@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CMRouterHandler : NSObject
 
-- (NSString *) handlerURL: (NSString  *)url
+- (NSString *) handlerURL: (NSString  *)url;
+
+- (void)handlerObject:(id)obj forPath:(NSString *)path;
+
 
 @end
 

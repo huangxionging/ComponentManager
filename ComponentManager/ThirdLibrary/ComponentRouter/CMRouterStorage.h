@@ -30,7 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) UIViewController *currentTopViewController;
 
-//- (void) setViewController:(UIViewController *)viewController forKey:(NSString *)key
 
 @end
 

@@ -1,16 +1,16 @@
 //
-//  CMRouterPresentor.h
+//  TSViewController1.h
 //  ComponentManager
 //
-//  Created by 黄雄 on 2018/10/23.
+//  Created by 黄雄 on 2018/10/29.
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMRouterPresentor : NSObject
+@interface TSViewController1 : UIViewController
 
 @end
 

@@ -9,7 +9,23 @@
 #import "CMRouterStorage.h"
 
 @implementation CMRouterStorage
--(instancetype)init {
-    UIViewController *d;
+
+- (NSMutableDictionary *)routerStorage {
+    if (_routerStorage == nil) {
+        _routerStorage = [NSMutableDictionary dictionaryWithCapacity:10];
+    }
+    return _routerStorage;
 }
+
+- (id)queryValueForPath: (NSString *)path {
+    return [self.routerStorage valueForKey: path];
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key {
+    [self.routerStorage setValue: value forKey: key];
+}
+
+
+
+
 @end

@@ -8,11 +8,15 @@
 
 #import "CMRouterManager.h"
 #import "CMDispatchMessageManager.h"
+#import "CMRouterTask.h"
 #import "CMRouterHandler.h"
+#import "CMRouterStorage.h"
 
 @interface CMRouterManager ()
 
 @property (nonatomic, strong) CMRouterHandler *routerHandler;
+
+//@property (nonatomic, strong) CMRouterStorage *routerStorage;
 
 @end
 
@@ -36,8 +40,19 @@
     return routeManager;
 }
 
+- (void)registerTabBarController:(UITabBarController *)tabBarController forPath:(NSString *)path {
+    [self.routerHandler handlerObject: tabBarController forPath: path];
+}
+
+- (void)registerNavigationController:(UINavigationController *)navigationController forPath:(NSString *)path {
+    [self.routerHandler handlerObject: navigationController forPath: path];
+}
+
 - (void)router:(NSString *)urlString parameters:(id)parameters success:(void (^)(id _Nonnull))success failure:(void (^)(NSError * _Nonnull))failure {
-    [self.routerHandler handlerURL: urlString];
+    id obj = [self.routerHandler handlerURL: urlString];
+    CMRouterTask *task = [[CMRouterTask alloc] init];
+//    task.
+    [task invoke];
 }
 
 
