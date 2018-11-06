@@ -17,11 +17,11 @@
     return _routerStorage;
 }
 
-- (id)queryValueForPath: (NSString *)path {
+- (NSDictionary *)queryValueForPath: (NSString *)path {
     return [self.routerStorage valueForKey: path];
 }
 
-- (void)setValue:(id)value forKey:(NSString *)key {
+- (void)setValue:(NSDictionary *)value forKey:(NSString *)key {
     [self.routerStorage setValue: value forKey: key];
 }
 

@@ -7,7 +7,15 @@
 //
 
 #import "CMRouterTask.h"
+#import "CMDispatchMessageManager.h"
 
 @implementation CMRouterTask
+
+- (void) invokeWithSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+   self.object = [[CMDispatchMessageManager shareManager] dispatchReturnValueTarget: [self.taskClass alloc] method: @"initWithValue:", self.value, nil];
+    [[CMDispatchMessageManager shareManager] dispatchTarget: self.object method: @"invokeWithSuccess:failure:", success, failure, nil];
+}
+
+DEFAULT_DEALLOC
 
 @end

@@ -14,9 +14,15 @@
 
 @implementation TSViewController1
 
+- (void)setParameters:(NSDictionary *)parameters {
+    self.options = parameters;
+    NSLog(@"%@", self.options);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSLog(@"dssdsdds");
 }
 
 /*
@@ -28,5 +34,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)dealloc {
+    NSLog(@"gg");
+}
 
 @end

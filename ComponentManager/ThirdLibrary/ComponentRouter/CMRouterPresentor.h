@@ -6,11 +6,11 @@
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "CMRouterObject.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMRouterPresentor : NSObject
+@interface CMRouterPresentor : CMRouterObject
 
 @end
 

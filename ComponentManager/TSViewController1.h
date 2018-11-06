@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TSViewController1 : UIViewController
 
+@property (nonatomic, copy) NSDictionary *options;
+
+- (void)setParameters: (NSDictionary *)parameters;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

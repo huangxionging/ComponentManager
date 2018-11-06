@@ -20,30 +20,39 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)shareManager;
 
-
-/**
- 注册 标签导航控制器, 支持路由 url=switchTo://path
-
- @param tabBarController 标签控制器
- @param path 对应的路径
- */
-- (void) registerTabBarController: (UITabBarController *)tabBarController forPath: (NSString *)path;
-
-/**
- 注册导航控制器, 支持路由 url=navigateTo://path
-
- @param navigationController 导航控制器
- @param path 对应的路径
- */
-- (void) registerNavigationController:(UINavigationController *)navigationController forPath:(NSString *)path;
+//
+///**
+// 注册 标签导航控制器, 支持路由 url=switchTo://path
+//
+// @param tabBarController 标签控制器
+// @param path 对应的路径
+// */
+//- (void) registerTabBarController: (UITabBarController *)tabBarController forPath: (NSString *)path;
+//
+///**
+// 注册导航控制器, 支持路由 url=navigateTo://path
+//
+// @param navigationController 导航控制器
+// @param path 对应的路径
+// */
+//- (void) registerNavigationController:(UINavigationController *)navigationController forPath:(NSString *)path;
 
 /**
  注册控制器
 
- @param viewController 视图控制器, 支持 url=presentTo://path
+ @param viewController 视图控制器
  @param path 对应的路径
  */
-- (void) registerViewController:(UIViewController *)viewController forPath:(NSString *)path;
+- (void) registerTopViewController:(UIViewController *)viewController forPath:(NSString *)path;
+
+
+/**
+  通过类名注册类
+
+ @param className 类名
+ @param path 路径
+ */
+- (void) registerClass:(NSString *)className forPath:(NSString *)path;
 
 /**
  注册 block 回调
@@ -51,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param block 回调, 支持路由协议 url=blockTo://path
  @param path 对应的路径
  */
-- (void) registerBlock: (void(^)(void))block forPath:(NSString *)path;
+- (void) registerBlock: (void(^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path;
 
 /**
  通过 类 URL 协议来访问数据

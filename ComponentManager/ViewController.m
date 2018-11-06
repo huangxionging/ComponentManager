@@ -14,6 +14,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "CMStringManager.h"
 #import "CMRouterManager.h"
+#import "TSViewController1.h"
 
 @interface ViewController ()
 
@@ -41,7 +42,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+    [[CMRouterManager shareManager] registerTopViewController: self forPath: @"/page/my/main"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -75,11 +76,12 @@
     NSLog(@"%@", string);
     NSDictionary *dic = @{@"name": @"huangxiong", @"email":@"huangxionging@163.com", @"sex":@"man"};
     NSLog(@"%@", [[CMStringManager shareManager] encodeURL: @"http://qnimage.32teeth.cn/窝沟封闭可以帮助儿童预防龋齿_360.mp4"]);
-    [[CMRouterManager shareManager] router: @"navigateTo://page/my/personal" parameters: nil success:^(id  _Nonnull responseObject) {
 
-    } failure:^(NSError * _Nonnull error) {
+//    [[CMRouterManager shareManager] registerTabBarController: self.tabBarController forPath: @"main_tab"];
+//    [[CMRouterManager shareManager] registerNavigationController: self.navigationController forPath: @"my"];
+    // 注册页面
+    [[CMRouterManager shareManager] registerClass: @"TSViewController1" forPath: @"page/my/personal"];
 
-    }];
 }
 
 
@@ -89,4 +91,12 @@
 }
 
 
+- (IBAction)nextClick:(id)sender {
+    NSDictionary *param = @{@"name":@"huangxiong"};
+    [[CMRouterManager shareManager] router: @"navigateTo://page/my/personal" parameters: param success:^(id  _Nonnull responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+}
 @end

@@ -14,6 +14,9 @@
 		342C0C71217F21BD00227D24 /* CMRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C6F217F21BD00227D24 /* CMRouterManager.m */; };
 		342C0C77217F23CB00227D24 /* CMRouterNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C76217F23CB00227D24 /* CMRouterNavigator.m */; };
 		342C0C7A217F265100227D24 /* CMRouterPresentor.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C79217F265100227D24 /* CMRouterPresentor.m */; };
+		3450232221919CEC0032C80B /* CMRouterBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450231D21919CEC0032C80B /* CMRouterBlocker.m */; };
+		3450232321919CEC0032C80B /* CMRouterDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450231E21919CEC0032C80B /* CMRouterDispatcher.m */; };
+		3450232421919CEC0032C80B /* CMRouterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450232121919CEC0032C80B /* CMRouterObject.m */; };
 		34E0A6632186EF7100791B1C /* CMRouterStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0A6622186EF7100791B1C /* CMRouterStorage.m */; };
 		34E0A667218719AE00791B1C /* TSViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0A665218719AE00791B1C /* TSViewController1.m */; };
 		34E0A668218719AE00791B1C /* TSViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E0A666218719AE00791B1C /* TSViewController1.xib */; };
@@ -100,6 +103,14 @@
 		342C0C76217F23CB00227D24 /* CMRouterNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterNavigator.m; sourceTree = "<group>"; };
 		342C0C78217F265100227D24 /* CMRouterPresentor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterPresentor.h; sourceTree = "<group>"; };
 		342C0C79217F265100227D24 /* CMRouterPresentor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterPresentor.m; sourceTree = "<group>"; };
+		3450231C21919CEB0032C80B /* CMRouterObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterObject.h; sourceTree = "<group>"; };
+		3450231D21919CEC0032C80B /* CMRouterBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterBlocker.m; sourceTree = "<group>"; };
+		3450231E21919CEC0032C80B /* CMRouterDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterDispatcher.m; sourceTree = "<group>"; };
+		3450231F21919CEC0032C80B /* CMRouterBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterBlocker.h; sourceTree = "<group>"; };
+		3450232021919CEC0032C80B /* CMRouterDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterDispatcher.h; sourceTree = "<group>"; };
+		3450232121919CEC0032C80B /* CMRouterObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterObject.m; sourceTree = "<group>"; };
+		3450232521919D560032C80B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3450232721919E080032C80B /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		34E0A6612186EF7100791B1C /* CMRouterStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterStorage.h; sourceTree = "<group>"; };
 		34E0A6622186EF7100791B1C /* CMRouterStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterStorage.m; sourceTree = "<group>"; };
 		34E0A664218719AE00791B1C /* TSViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSViewController1.h; sourceTree = "<group>"; };
@@ -261,6 +272,12 @@
 		342C0C6B217F213400227D24 /* ComponentRouter */ = {
 			isa = PBXGroup;
 			children = (
+				3450231F21919CEC0032C80B /* CMRouterBlocker.h */,
+				3450231D21919CEC0032C80B /* CMRouterBlocker.m */,
+				3450232021919CEC0032C80B /* CMRouterDispatcher.h */,
+				3450231E21919CEC0032C80B /* CMRouterDispatcher.m */,
+				3450231C21919CEB0032C80B /* CMRouterObject.h */,
+				3450232121919CEC0032C80B /* CMRouterObject.m */,
 				342C0C70217F21BD00227D24 /* CMRouterManager.h */,
 				342C0C6F217F21BD00227D24 /* CMRouterManager.m */,
 				34E0A6612186EF7100791B1C /* CMRouterStorage.h */,
@@ -347,6 +364,8 @@
 				F2618B3A1DF2BA6500CB0605 /* LaunchScreen.storyboard */,
 				F2618B3D1DF2BA6500CB0605 /* Info.plist */,
 				F2618B2C1DF2BA6500CB0605 /* Supporting Files */,
+				3450232521919D560032C80B /* PrefixHeader.pch */,
+				3450232721919E080032C80B /* Header.h */,
 			);
 			path = ComponentManager;
 			sourceTree = "<group>";
@@ -724,6 +743,7 @@
 				F2618C251DF2C2DB00CB0605 /* AFAutoPurgingImageCache.m in Sources */,
 				F2618C461DF2C2DB00CB0605 /* UIImageView+WebCache.m in Sources */,
 				F2618C421DF2C2DB00CB0605 /* UIButton+WebCache.m in Sources */,
+				3450232421919CEC0032C80B /* CMRouterObject.m in Sources */,
 				3403189121801F8E003370A7 /* CMRouterTask.m in Sources */,
 				F21072231E6E617F00D7695D /* CMPushManager.m in Sources */,
 				F2618C3E1DF2C2DB00CB0605 /* SDWebImageDownloader.m in Sources */,
@@ -742,10 +762,12 @@
 				F2618C3B1DF2C2DB00CB0605 /* SDImageCache.m in Sources */,
 				F2618C2D1DF2C2DB00CB0605 /* UIWebView+AFNetworking.m in Sources */,
 				F2618B2E1DF2BA6500CB0605 /* main.m in Sources */,
+				3450232221919CEC0032C80B /* CMRouterBlocker.m in Sources */,
 				34E93398217D9C3B002D37B9 /* CMStringManager.m in Sources */,
 				F2618C281DF2C2DB00CB0605 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F21072281E6E617F00D7695D /* CMViewControllerManager.m in Sources */,
 				F2618C271DF2C2DB00CB0605 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				3450232321919CEC0032C80B /* CMRouterDispatcher.m in Sources */,
 				F2618C3A1DF2C2DB00CB0605 /* NSData+ImageContentType.m in Sources */,
 				F2618C311DF2C2DB00CB0605 /* FMDatabaseAdditions.m in Sources */,
 				F21072261E6E617F00D7695D /* CMShowHUDManager.m in Sources */,
@@ -893,6 +915,7 @@
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialUI",
 				);
+				GCC_PREFIX_HEADER = ComponentManager/PrefixHeader.pch;
 				INFOPLIST_FILE = ComponentManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -919,6 +942,7 @@
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialUI",
 				);
+				GCC_PREFIX_HEADER = ComponentManager/PrefixHeader.pch;
 				INFOPLIST_FILE = ComponentManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

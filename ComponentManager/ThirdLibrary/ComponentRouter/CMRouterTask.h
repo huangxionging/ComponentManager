@@ -7,19 +7,35 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CMRouterObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CMRouterTask : NSObject
 
+@property (nonatomic, strong) CMRouterObject *object;
+
 /**
- 
+ 执行的类
  */
-@property (nonatomic, copy) NSString *taskClass;
+@property (nonatomic, strong) Class taskClass;
 
-@property (nonatomic, strong) id parameter;
+/**
+ 参数
+ */
+@property (nonatomic, copy) NSDictionary *value;
 
-- (void) invoke;
+/**
+ 成功回调
+ */
+@property (nonatomic, copy)void(^success)(id responseObject);
+
+/**
+ 失败回调
+ */
+@property (nonatomic, copy)void(^failure)(NSError *error);
+
+- (void) invokeWithSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 @end
 

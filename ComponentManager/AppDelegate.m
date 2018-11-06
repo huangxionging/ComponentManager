@@ -18,13 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UIStoryboard *story = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
-    UITabBarController *tabBar = [story instantiateViewControllerWithIdentifier: @"tabBar"];
-    NSLog(@"%@", tabBar);
-    [[CMRouterManager shareManager] registerTabBarController: tabBar forPath: @"main_tab"];
-    UINavigationController *navi1 = [story instantiateViewControllerWithIdentifier: @"navigation1"];
-    [[CMRouterManager shareManager] registerNavigationController: navi1 forPath: @"my"];
-
+    
     return YES;
 }
 

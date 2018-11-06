@@ -18,18 +18,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  当前的 tabBar 控制器
  */
-@property (nonatomic, weak) UITabBarController *currentTabBarController;
+@property (nonatomic, strong) UITabBarController *currentTabBarController;
 
 /**
  当前的导航控制器
  */
-@property (nonatomic, weak) UINavigationController *currentNavigationBarController;
+@property (nonatomic, strong, nullable) UINavigationController *currentNavigationController;
 
 /**
  当前最顶层的控制器
  */
 @property (nonatomic, strong) UIViewController *currentTopViewController;
 
+- (NSDictionary *)queryValueForPath: (NSString *)path;
 
 @end
 

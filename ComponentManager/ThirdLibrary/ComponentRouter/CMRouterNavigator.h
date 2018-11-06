@@ -6,16 +6,15 @@
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+
 #import <UIKit/UIKit.h>
+#import "CMRouterObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMRouterNavigator : NSObject
+@interface CMRouterNavigator : CMRouterObject
 
-@property (nonatomic, copy) NSDictionary *navigatorInfo;
 
-- (void) invoke;
 
 @end
 
