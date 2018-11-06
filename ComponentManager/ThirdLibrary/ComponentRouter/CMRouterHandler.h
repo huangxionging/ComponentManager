@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param block block
  @param path 路径
  */
-- (void)handlerBlock:(void(^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path;
+- (void)handlerBlock:(id _Nullable (^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path;
 
 /**
  处理类名

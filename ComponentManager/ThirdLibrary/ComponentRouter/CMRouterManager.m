@@ -54,7 +54,7 @@
     [self.routerHandler handlerObject: viewController forPath: path];
 }
 
-- (void)registerBlock:(void (^)(id _Nullable, id _Nullable))block forPath:(NSString *)path{
+- (void)registerBlock:(id _Nullable (^)(id _Nullable, id _Nullable))block forPath:(NSString *)path{
     [self.routerHandler handlerBlock: block forPath: path];
 }
 

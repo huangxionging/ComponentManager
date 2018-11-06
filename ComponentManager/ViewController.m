@@ -81,6 +81,11 @@
 //    [[CMRouterManager shareManager] registerNavigationController: self.navigationController forPath: @"my"];
     // 注册页面
     [[CMRouterManager shareManager] registerClass: @"TSViewController1" forPath: @"page/my/personal"];
+    [[CMRouterManager shareManager] registerBlock:^id _Nullable(id  _Nullable responseObject, id  _Nullable callBack) {
+        NSLog(@"%@", responseObject);
+        return nil;
+    } forPath: @"shabi"];
+    
 
 }
 

@@ -58,9 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
  注册 block 回调
 
  @param block 回调, 支持路由协议 url=blockTo://path
- @param path 对应的路径
+ @param id 对应的路径
  */
-- (void) registerBlock: (void(^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path;
+- (void) registerBlock: (id _Nullable(^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path;
 
 /**
  通过 类 URL 协议来访问数据

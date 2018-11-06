@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic , strong) NSMutableDictionary *routerStorage;
 
+@property(nonatomic , strong) NSMutableDictionary<NSString *, id _Nullable(^)(id _Nullable, id _Nullable)> *routerBlockStorage;
+
 /**
  当前的 tabBar 控制器
  */
@@ -30,7 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) UIViewController *currentTopViewController;
 
-- (NSDictionary *)queryValueForPath: (NSString *)path;
+- (id)queryValueForPath: (NSString *)path;
+
+
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "TSViewController1.h"
+#import "CMRouterManager.h"
 
 @interface TSViewController1 ()
 
@@ -23,6 +24,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"dssdsdds");
+    [[CMRouterManager shareManager] router: @"blockTo://shabi" parameters: @"ssdd" success:^(id  _Nonnull responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSError * _Nonnull error) {
+
+    }];
+
+    void(^block)(id, id) = [[CMRouterManager shareManager] valueForKeyPath: @"routerHandler.routerStorage.routerBlockStorage.shabi"];
+    NSLog(@"%@", block);
+    block(@"dd", @"dds");
 }
 
 /*

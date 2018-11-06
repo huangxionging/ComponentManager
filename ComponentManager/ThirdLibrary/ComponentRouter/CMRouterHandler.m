@@ -82,9 +82,9 @@
     [self.routerStorage setValue: @{@"type":@"class", @"value": className} forKey: path];
 }
 
-- (void)handlerBlock:(void(^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path; {
+- (void)handlerBlock:(id _Nullable(^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path; {
 //    [self.routerStorage setValue: @{@"type":@"block", @"value": block} forKey: path];
-    [self.routerStorage.routerStorage setObject: block forKey: path];
+    [self.routerStorage.routerBlockStorage setObject: block forKey: path];
 }
 
 
