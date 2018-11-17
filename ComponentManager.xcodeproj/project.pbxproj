@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3403188E218001E2003370A7 /* CMRouterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3403188D218001E2003370A7 /* CMRouterHandler.m */; };
+		3403189121801F8E003370A7 /* CMRouterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3403189021801F8E003370A7 /* CMRouterTask.m */; };
+		3403189321804529003370A7 /* url.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3403189221804529003370A7 /* url.plist */; };
+		342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C64217F015400227D24 /* CMDispatchMessageManager.m */; };
+		342C0C71217F21BD00227D24 /* CMRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C6F217F21BD00227D24 /* CMRouterManager.m */; };
+		342C0C77217F23CB00227D24 /* CMRouterNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C76217F23CB00227D24 /* CMRouterNavigator.m */; };
+		342C0C7A217F265100227D24 /* CMRouterPresentor.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C79217F265100227D24 /* CMRouterPresentor.m */; };
+		3450232221919CEC0032C80B /* CMRouterBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450231D21919CEC0032C80B /* CMRouterBlocker.m */; };
+		3450232321919CEC0032C80B /* CMRouterDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450231E21919CEC0032C80B /* CMRouterDispatcher.m */; };
+		3450232421919CEC0032C80B /* CMRouterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450232121919CEC0032C80B /* CMRouterObject.m */; };
+		34E0A6632186EF7100791B1C /* CMRouterStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0A6622186EF7100791B1C /* CMRouterStorage.m */; };
+		34E0A667218719AE00791B1C /* TSViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0A665218719AE00791B1C /* TSViewController1.m */; };
+		34E0A668218719AE00791B1C /* TSViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E0A666218719AE00791B1C /* TSViewController1.xib */; };
+		34E93398217D9C3B002D37B9 /* CMStringManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E93397217D9C3B002D37B9 /* CMStringManager.m */; };
 		F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */; };
 		F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */; };
 		F21072201E6E617F00D7695D /* CMCameraManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F210720F1E6E617F00D7695D /* CMCameraManger.m */; };
@@ -76,6 +90,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3403188C218001E2003370A7 /* CMRouterHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterHandler.h; sourceTree = "<group>"; };
+		3403188D218001E2003370A7 /* CMRouterHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterHandler.m; sourceTree = "<group>"; };
+		3403188F21801F8E003370A7 /* CMRouterTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterTask.h; sourceTree = "<group>"; };
+		3403189021801F8E003370A7 /* CMRouterTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterTask.m; sourceTree = "<group>"; };
+		3403189221804529003370A7 /* url.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = url.plist; sourceTree = "<group>"; };
+		342C0C64217F015400227D24 /* CMDispatchMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDispatchMessageManager.m; sourceTree = "<group>"; };
+		342C0C65217F015400227D24 /* CMDispatchMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDispatchMessageManager.h; sourceTree = "<group>"; };
+		342C0C6F217F21BD00227D24 /* CMRouterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterManager.m; sourceTree = "<group>"; };
+		342C0C70217F21BD00227D24 /* CMRouterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterManager.h; sourceTree = "<group>"; };
+		342C0C75217F23CA00227D24 /* CMRouterNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterNavigator.h; sourceTree = "<group>"; };
+		342C0C76217F23CB00227D24 /* CMRouterNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterNavigator.m; sourceTree = "<group>"; };
+		342C0C78217F265100227D24 /* CMRouterPresentor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterPresentor.h; sourceTree = "<group>"; };
+		342C0C79217F265100227D24 /* CMRouterPresentor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterPresentor.m; sourceTree = "<group>"; };
+		3450231C21919CEB0032C80B /* CMRouterObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterObject.h; sourceTree = "<group>"; };
+		3450231D21919CEC0032C80B /* CMRouterBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterBlocker.m; sourceTree = "<group>"; };
+		3450231E21919CEC0032C80B /* CMRouterDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterDispatcher.m; sourceTree = "<group>"; };
+		3450231F21919CEC0032C80B /* CMRouterBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterBlocker.h; sourceTree = "<group>"; };
+		3450232021919CEC0032C80B /* CMRouterDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterDispatcher.h; sourceTree = "<group>"; };
+		3450232121919CEC0032C80B /* CMRouterObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterObject.m; sourceTree = "<group>"; };
+		3450232521919D560032C80B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3450232721919E080032C80B /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		34E0A6612186EF7100791B1C /* CMRouterStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterStorage.h; sourceTree = "<group>"; };
+		34E0A6622186EF7100791B1C /* CMRouterStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterStorage.m; sourceTree = "<group>"; };
+		34E0A664218719AE00791B1C /* TSViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSViewController1.h; sourceTree = "<group>"; };
+		34E0A665218719AE00791B1C /* TSViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSViewController1.m; sourceTree = "<group>"; };
+		34E0A666218719AE00791B1C /* TSViewController1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSViewController1.xib; sourceTree = "<group>"; };
+		34E93396217D9C3B002D37B9 /* CMStringManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMStringManager.h; sourceTree = "<group>"; };
+		34E93397217D9C3B002D37B9 /* CMStringManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMStringManager.m; sourceTree = "<group>"; };
 		F2055AB91E2CAF1C00ABF746 /* shakeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shakeMusic.wav; sourceTree = "<group>"; };
 		F2055ABB1E2CAF5700ABF746 /* beep.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.ogg; sourceTree = "<group>"; };
 		F2055ABE1E2CAFFF00ABF746 /* qrcode_found.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = qrcode_found.wav; sourceTree = "<group>"; };
@@ -227,6 +269,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		342C0C6B217F213400227D24 /* ComponentRouter */ = {
+			isa = PBXGroup;
+			children = (
+				3450231F21919CEC0032C80B /* CMRouterBlocker.h */,
+				3450231D21919CEC0032C80B /* CMRouterBlocker.m */,
+				3450232021919CEC0032C80B /* CMRouterDispatcher.h */,
+				3450231E21919CEC0032C80B /* CMRouterDispatcher.m */,
+				3450231C21919CEB0032C80B /* CMRouterObject.h */,
+				3450232121919CEC0032C80B /* CMRouterObject.m */,
+				342C0C70217F21BD00227D24 /* CMRouterManager.h */,
+				342C0C6F217F21BD00227D24 /* CMRouterManager.m */,
+				34E0A6612186EF7100791B1C /* CMRouterStorage.h */,
+				34E0A6622186EF7100791B1C /* CMRouterStorage.m */,
+				3403188F21801F8E003370A7 /* CMRouterTask.h */,
+				3403189021801F8E003370A7 /* CMRouterTask.m */,
+				3403188C218001E2003370A7 /* CMRouterHandler.h */,
+				3403188D218001E2003370A7 /* CMRouterHandler.m */,
+				342C0C75217F23CA00227D24 /* CMRouterNavigator.h */,
+				342C0C76217F23CB00227D24 /* CMRouterNavigator.m */,
+				342C0C78217F265100227D24 /* CMRouterPresentor.h */,
+				342C0C79217F265100227D24 /* CMRouterPresentor.m */,
+				3403189221804529003370A7 /* url.plist */,
+			);
+			path = ComponentRouter;
+			sourceTree = "<group>";
+		};
 		F210720D1E6E617F00D7695D /* ComponentManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +320,10 @@
 				F210721D1E6E617F00D7695D /* CMTimerManager.m */,
 				F210721E1E6E617F00D7695D /* CMViewControllerManager.h */,
 				F210721F1E6E617F00D7695D /* CMViewControllerManager.m */,
+				34E93396217D9C3B002D37B9 /* CMStringManager.h */,
+				34E93397217D9C3B002D37B9 /* CMStringManager.m */,
+				342C0C65217F015400227D24 /* CMDispatchMessageManager.h */,
+				342C0C64217F015400227D24 /* CMDispatchMessageManager.m */,
 			);
 			path = ComponentManager;
 			sourceTree = "<group>";
@@ -276,6 +348,9 @@
 		F2618B2B1DF2BA6500CB0605 /* ComponentManager */ = {
 			isa = PBXGroup;
 			children = (
+				34E0A664218719AE00791B1C /* TSViewController1.h */,
+				34E0A665218719AE00791B1C /* TSViewController1.m */,
+				34E0A666218719AE00791B1C /* TSViewController1.xib */,
 				F2618B2F1DF2BA6500CB0605 /* AppDelegate.h */,
 				F2618B301DF2BA6500CB0605 /* AppDelegate.m */,
 				F2618B321DF2BA6500CB0605 /* ViewController.h */,
@@ -289,6 +364,8 @@
 				F2618B3A1DF2BA6500CB0605 /* LaunchScreen.storyboard */,
 				F2618B3D1DF2BA6500CB0605 /* Info.plist */,
 				F2618B2C1DF2BA6500CB0605 /* Supporting Files */,
+				3450232521919D560032C80B /* PrefixHeader.pch */,
+				3450232721919E080032C80B /* Header.h */,
 			);
 			path = ComponentManager;
 			sourceTree = "<group>";
@@ -304,6 +381,7 @@
 		F2618BC01DF2C2DB00CB0605 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				342C0C6B217F213400227D24 /* ComponentRouter */,
 				F26881751EAD07AC00582C27 /* UMSocial */,
 				F210720D1E6E617F00D7695D /* ComponentManager */,
 				F2618BC11DF2C2DB00CB0605 /* AFNetworking */,
@@ -580,7 +658,7 @@
 		F2618B211DF2BA6500CB0605 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = huangxiong;
 				TargetAttributes = {
 					F2618B281DF2BA6500CB0605 = {
@@ -619,6 +697,8 @@
 				F26881961EAD07AC00582C27 /* UMSocialSDKPromptResources.bundle in Resources */,
 				F2055ABF1E2CAFFF00ABF746 /* qrcode_found.wav in Resources */,
 				F26881981EAD07AC00582C27 /* UMSocialSDKResources.bundle in Resources */,
+				3403189321804529003370A7 /* url.plist in Resources */,
+				34E0A668218719AE00791B1C /* TSViewController1.xib in Resources */,
 				F26881931EAD07AC00582C27 /* README.txt in Resources */,
 				F2055ABA1E2CAF1C00ABF746 /* shakeMusic.wav in Resources */,
 			);
@@ -639,25 +719,32 @@
 				F2618C2B1DF2C2DB00CB0605 /* UIProgressView+AFNetworking.m in Sources */,
 				F2618C291DF2C2DB00CB0605 /* UIButton+AFNetworking.m in Sources */,
 				F2618C2C1DF2C2DB00CB0605 /* UIRefreshControl+AFNetworking.m in Sources */,
+				34E0A6632186EF7100791B1C /* CMRouterStorage.m in Sources */,
 				F21072251E6E617F00D7695D /* CMScanQRCodeManager.m in Sources */,
 				F2618C201DF2C2DB00CB0605 /* AFURLRequestSerialization.m in Sources */,
 				F210722B1E6E61D700D7695D /* CMImageManager.m in Sources */,
 				F2618C3F1DF2C2DB00CB0605 /* SDWebImageDownloaderOperation.m in Sources */,
+				342C0C77217F23CB00227D24 /* CMRouterNavigator.m in Sources */,
 				F2618B341DF2BA6500CB0605 /* ViewController.m in Sources */,
 				F2618B311DF2BA6500CB0605 /* AppDelegate.m in Sources */,
 				F2618C451DF2C2DB00CB0605 /* UIImageView+HighlightedWebCache.m in Sources */,
 				F2618C301DF2C2DB00CB0605 /* FMDatabase.m in Sources */,
 				F2618C221DF2C2DB00CB0605 /* AFURLSessionManager.m in Sources */,
 				F2618C211DF2C2DB00CB0605 /* AFURLResponseSerialization.m in Sources */,
+				342C0C7A217F265100227D24 /* CMRouterPresentor.m in Sources */,
 				F2618C2A1DF2C2DB00CB0605 /* UIImageView+AFNetworking.m in Sources */,
 				F2618C321DF2C2DB00CB0605 /* FMDatabasePool.m in Sources */,
 				F2618C431DF2C2DB00CB0605 /* UIImage+GIF.m in Sources */,
 				F2618C1E1DF2C2DB00CB0605 /* AFNetworkReachabilityManager.m in Sources */,
+				342C0C71217F21BD00227D24 /* CMRouterManager.m in Sources */,
 				F21072211E6E617F00D7695D /* CMKeyboardManager.m in Sources */,
 				F2618C341DF2C2DB00CB0605 /* FMResultSet.m in Sources */,
+				3403188E218001E2003370A7 /* CMRouterHandler.m in Sources */,
 				F2618C251DF2C2DB00CB0605 /* AFAutoPurgingImageCache.m in Sources */,
 				F2618C461DF2C2DB00CB0605 /* UIImageView+WebCache.m in Sources */,
 				F2618C421DF2C2DB00CB0605 /* UIButton+WebCache.m in Sources */,
+				3450232421919CEC0032C80B /* CMRouterObject.m in Sources */,
+				3403189121801F8E003370A7 /* CMRouterTask.m in Sources */,
 				F21072231E6E617F00D7695D /* CMPushManager.m in Sources */,
 				F2618C3E1DF2C2DB00CB0605 /* SDWebImageDownloader.m in Sources */,
 				F2618C441DF2C2DB00CB0605 /* UIImage+MultiFormat.m in Sources */,
@@ -666,16 +753,21 @@
 				F2618C331DF2C2DB00CB0605 /* FMDatabaseQueue.m in Sources */,
 				F2618C1D1DF2C2DB00CB0605 /* AFHTTPSessionManager.m in Sources */,
 				F21072241E6E617F00D7695D /* CMQRCodeManager.m in Sources */,
+				34E0A667218719AE00791B1C /* TSViewController1.m in Sources */,
 				F2618C3C1DF2C2DB00CB0605 /* SDWebImageCompat.m in Sources */,
 				F21072221E6E617F00D7695D /* CMLoginRegisterManager.m in Sources */,
+				342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */,
 				F2618C261DF2C2DB00CB0605 /* AFImageDownloader.m in Sources */,
 				F2618C3D1DF2C2DB00CB0605 /* SDWebImageDecoder.m in Sources */,
 				F2618C3B1DF2C2DB00CB0605 /* SDImageCache.m in Sources */,
 				F2618C2D1DF2C2DB00CB0605 /* UIWebView+AFNetworking.m in Sources */,
 				F2618B2E1DF2BA6500CB0605 /* main.m in Sources */,
+				3450232221919CEC0032C80B /* CMRouterBlocker.m in Sources */,
+				34E93398217D9C3B002D37B9 /* CMStringManager.m in Sources */,
 				F2618C281DF2C2DB00CB0605 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F21072281E6E617F00D7695D /* CMViewControllerManager.m in Sources */,
 				F2618C271DF2C2DB00CB0605 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				3450232321919CEC0032C80B /* CMRouterDispatcher.m in Sources */,
 				F2618C3A1DF2C2DB00CB0605 /* NSData+ImageContentType.m in Sources */,
 				F2618C311DF2C2DB00CB0605 /* FMDatabaseAdditions.m in Sources */,
 				F21072261E6E617F00D7695D /* CMShowHUDManager.m in Sources */,
@@ -714,15 +806,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -763,15 +863,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -807,6 +915,7 @@
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialUI",
 				);
+				GCC_PREFIX_HEADER = ComponentManager/PrefixHeader.pch;
 				INFOPLIST_FILE = ComponentManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -833,6 +942,7 @@
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/ComponentManager/ThirdLibrary/UMSocial/UMSocialUI",
 				);
+				GCC_PREFIX_HEADER = ComponentManager/PrefixHeader.pch;
 				INFOPLIST_FILE = ComponentManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
