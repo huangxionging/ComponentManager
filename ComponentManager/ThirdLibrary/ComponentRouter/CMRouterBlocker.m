@@ -2,8 +2,8 @@
 //  CMRouterBlocker.m
 //  Hydrodent
 //
-//  Created by 黄雄 on 2018/11/6.
-//  Copyright © 2018 xiaoli. All rights reserved.
+//  Created by huangxiong on 2018/11/6.
+//  Copyright © 2018 huangxiong. All rights reserved.
 //
 
 #import "CMRouterBlocker.h"
@@ -11,24 +11,17 @@
 @implementation CMRouterBlocker
 
 - (void)invokeWithSuccess:(void (^)(id _Nonnull))success failure:(void (^)(NSError * _Nonnull))failure {
-
-//    NSDictionary *value = self.values[@"value"];
-//    if (value == nil) {
-//        NSError *error = [NSError errorWithDomain: NSStringFromClass([self class]) code: 10001 userInfo: @{NSLocalizedDescriptionKey : @"该回调不存在"}];
-//        if (failure) {
-//            failure(error);
-//        }
-//        return;
-//    }
-    NSLog(@"%@", self);
-    id (^block)() = self.values[@"value"];
-//    id parameter = self.values[@"parameters"];
-        // 表示参数个数
-    block(@"dd", nil);
-//    if ([value[@"type"] isEqualToString: @"block"]) {
-//
-//    }
-
+    void(^block)() = self.object;
+    if (block == nil) {
+        NSError *error = [NSError errorWithDomain: NSStringFromClass([self class]) code: 10001 userInfo: @{NSLocalizedDescriptionKey : @"block为空"}];
+        if (failure) {
+            failure(error);
+        }
+        return;
+    }
+    id parameter = self.parameters;
+    // 表示参数个数
+    block(parameter, success, failure);
 }
 
 DEFAULT_DEALLOC

@@ -2,7 +2,7 @@
 //  CMRouterPresentor.h
 //  ComponentManager
 //
-//  Created by 黄雄 on 2018/10/23.
+//  Created by huangxiong on 2018/10/23.
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
@@ -11,6 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CMRouterPresentor : CMRouterObject
+
+@end
+
+@interface UIViewController (RouterPresentor)
+
++ (void) routerWithFrontViewController: (UIViewController *)frontViewController parameters:(id)parameters;
 
 @end
 

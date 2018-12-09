@@ -2,7 +2,7 @@
 //  CMRouterStorage.h
 //  ComponentManager
 //
-//  Created by 黄雄 on 2018/10/23.
+//  Created by huangxiong on 2018/10/23.
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic , strong) NSMutableDictionary *routerStorage;
 
-@property(nonatomic , strong) NSMutableDictionary<NSString *, id _Nullable(^)(id _Nullable, id _Nullable)> *routerBlockStorage;
+@property(nonatomic , strong) NSMutableDictionary<NSString *, void(^)()> *routerBlockStorage;
+
+@property(nonatomic , strong) NSMutableDictionary<NSString *, NSArray *> *routerMessageBlockStorage;
 
 /**
  当前的 tabBar 控制器

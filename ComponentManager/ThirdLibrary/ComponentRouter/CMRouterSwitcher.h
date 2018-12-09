@@ -1,8 +1,8 @@
 //
-//  CMRouterBlocker.h
+//  CMRouterSwitcher.h
 //  Hydrodent
 //
-//  Created by huangxiong on 2018/11/6.
+//  Created by 黄雄 on 2018/11/17.
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CMRouterBlocker : CMRouterObject
+@interface CMRouterSwitcher : CMRouterObject
 
 @end
 

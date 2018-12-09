@@ -2,7 +2,7 @@
 //  CMRouterNavigator.h
 //  ComponentManager
 //
-//  Created by 黄雄 on 2018/10/23.
+//  Created by huangxiong on 2018/10/23.
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
@@ -14,8 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CMRouterNavigator : CMRouterObject
 
+- (instancetype)initWithValue:(NSDictionary *)value;
 
+@end
 
+@interface UIViewController (RouterNavigator)
++ (void) routerWithNavigator:(UINavigationController *)navigationController parameters:(id)parameters;
+
+- (void) setParameters:(id)parameters;
 @end
 
 NS_ASSUME_NONNULL_END

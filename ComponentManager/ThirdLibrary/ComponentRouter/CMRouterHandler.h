@@ -2,7 +2,7 @@
 //  CMRouterHandler.h
 //  ComponentManager
 //
-//  Created by 黄雄 on 2018/10/24.
+//  Created by huangxiong on 2018/10/24.
 //  Copyright © 2018 huangxiong. All rights reserved.
 //
 
@@ -16,7 +16,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CMRouterTask *) handlerURL:(NSString *)urlString parameters:(id _Nullable)parameters;
 
+/**
+ 通过路径处理对象
+
+ @param obj 对象
+ @param path 路径
+ */
 - (void)handlerObject:(id)obj forPath:(NSString *)path;
+
+/**
+ 通过路径查询对象
+ @param path 路径
+ @return 对象
+ */
+- (id) handlerObjectForPath:(NSString *)path;
 
 
 /**
@@ -25,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param block block
  @param path 路径
  */
-- (void)handlerBlock:(id _Nullable (^)(id _Nullable responseObject, id _Nullable callBack))block forPath:(NSString *)path;
+- (void)handlerBlock:(void(^)())block forPath:(NSString *)path;
 
 /**
  处理类名
@@ -34,6 +47,29 @@ NS_ASSUME_NONNULL_BEGIN
  @param path 路径
  */
 - (void)handlerClass:(NSString *)className forPath:(NSString *)path;
+
+/**
+ 通过 path 删除
+
+ @param path 路径
+ */
+- (void)handlerRemoveForPath:(NSString *)path;
+
+/**
+ 通过 path 查询
+
+ @param path 路径
+ */
+- (BOOL)handlerExistForRouter:(NSString *)urlString;
+
+/**
+ 处理目标对应的消息回调, 根据路径标识
+
+ @param target 目标
+ @param block 消息回调
+ @param path 路径
+ */
+- (void)handlerTarget: (id) target messageBlock:(void(^)())messageBlock forPath:(NSString *)path;
 
 
 @end

@@ -10,6 +10,10 @@
 		3403188E218001E2003370A7 /* CMRouterHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3403188D218001E2003370A7 /* CMRouterHandler.m */; };
 		3403189121801F8E003370A7 /* CMRouterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3403189021801F8E003370A7 /* CMRouterTask.m */; };
 		3403189321804529003370A7 /* url.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3403189221804529003370A7 /* url.plist */; };
+		34101F8F21BD3D160000A335 /* CMRouterSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 34101F8921BD3D150000A335 /* CMRouterSwitcher.m */; };
+		34101F9021BD3D160000A335 /* CMRouterMessager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34101F8A21BD3D160000A335 /* CMRouterMessager.m */; };
+		34101F9121BD3D160000A335 /* CMRouterModuler.m in Sources */ = {isa = PBXBuildFile; fileRef = 34101F8C21BD3D160000A335 /* CMRouterModuler.m */; };
+		34101F9221BD3D160000A335 /* CMDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34101F8E21BD3D160000A335 /* CMDispatchManager.m */; };
 		342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C64217F015400227D24 /* CMDispatchMessageManager.m */; };
 		342C0C71217F21BD00227D24 /* CMRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C6F217F21BD00227D24 /* CMRouterManager.m */; };
 		342C0C77217F23CB00227D24 /* CMRouterNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 342C0C76217F23CB00227D24 /* CMRouterNavigator.m */; };
@@ -95,6 +99,14 @@
 		3403188F21801F8E003370A7 /* CMRouterTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMRouterTask.h; sourceTree = "<group>"; };
 		3403189021801F8E003370A7 /* CMRouterTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMRouterTask.m; sourceTree = "<group>"; };
 		3403189221804529003370A7 /* url.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = url.plist; sourceTree = "<group>"; };
+		34101F8721BD3D150000A335 /* CMDispatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDispatchManager.h; sourceTree = "<group>"; };
+		34101F8821BD3D150000A335 /* CMRouterModuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterModuler.h; sourceTree = "<group>"; };
+		34101F8921BD3D150000A335 /* CMRouterSwitcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterSwitcher.m; sourceTree = "<group>"; };
+		34101F8A21BD3D160000A335 /* CMRouterMessager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterMessager.m; sourceTree = "<group>"; };
+		34101F8B21BD3D160000A335 /* CMRouterMessager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterMessager.h; sourceTree = "<group>"; };
+		34101F8C21BD3D160000A335 /* CMRouterModuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterModuler.m; sourceTree = "<group>"; };
+		34101F8D21BD3D160000A335 /* CMRouterSwitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRouterSwitcher.h; sourceTree = "<group>"; };
+		34101F8E21BD3D160000A335 /* CMDispatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDispatchManager.m; sourceTree = "<group>"; };
 		342C0C64217F015400227D24 /* CMDispatchMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDispatchMessageManager.m; sourceTree = "<group>"; };
 		342C0C65217F015400227D24 /* CMDispatchMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDispatchMessageManager.h; sourceTree = "<group>"; };
 		342C0C6F217F21BD00227D24 /* CMRouterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRouterManager.m; sourceTree = "<group>"; };
@@ -272,6 +284,14 @@
 		342C0C6B217F213400227D24 /* ComponentRouter */ = {
 			isa = PBXGroup;
 			children = (
+				34101F8721BD3D150000A335 /* CMDispatchManager.h */,
+				34101F8E21BD3D160000A335 /* CMDispatchManager.m */,
+				34101F8B21BD3D160000A335 /* CMRouterMessager.h */,
+				34101F8A21BD3D160000A335 /* CMRouterMessager.m */,
+				34101F8821BD3D150000A335 /* CMRouterModuler.h */,
+				34101F8C21BD3D160000A335 /* CMRouterModuler.m */,
+				34101F8D21BD3D160000A335 /* CMRouterSwitcher.h */,
+				34101F8921BD3D150000A335 /* CMRouterSwitcher.m */,
 				3450231F21919CEC0032C80B /* CMRouterBlocker.h */,
 				3450231D21919CEC0032C80B /* CMRouterBlocker.m */,
 				3450232021919CEC0032C80B /* CMRouterDispatcher.h */,
@@ -715,6 +735,7 @@
 				F2618C411DF2C2DB00CB0605 /* SDWebImagePrefetcher.m in Sources */,
 				F26881741EAD077200582C27 /* CMShareManager.m in Sources */,
 				F2618C471DF2C2DB00CB0605 /* UIView+WebCacheOperation.m in Sources */,
+				34101F9021BD3D160000A335 /* CMRouterMessager.m in Sources */,
 				F21072271E6E617F00D7695D /* CMTimerManager.m in Sources */,
 				F2618C2B1DF2C2DB00CB0605 /* UIProgressView+AFNetworking.m in Sources */,
 				F2618C291DF2C2DB00CB0605 /* UIButton+AFNetworking.m in Sources */,
@@ -730,7 +751,9 @@
 				F2618C451DF2C2DB00CB0605 /* UIImageView+HighlightedWebCache.m in Sources */,
 				F2618C301DF2C2DB00CB0605 /* FMDatabase.m in Sources */,
 				F2618C221DF2C2DB00CB0605 /* AFURLSessionManager.m in Sources */,
+				34101F9221BD3D160000A335 /* CMDispatchManager.m in Sources */,
 				F2618C211DF2C2DB00CB0605 /* AFURLResponseSerialization.m in Sources */,
+				34101F9121BD3D160000A335 /* CMRouterModuler.m in Sources */,
 				342C0C7A217F265100227D24 /* CMRouterPresentor.m in Sources */,
 				F2618C2A1DF2C2DB00CB0605 /* UIImageView+AFNetworking.m in Sources */,
 				F2618C321DF2C2DB00CB0605 /* FMDatabasePool.m in Sources */,
@@ -756,6 +779,7 @@
 				34E0A667218719AE00791B1C /* TSViewController1.m in Sources */,
 				F2618C3C1DF2C2DB00CB0605 /* SDWebImageCompat.m in Sources */,
 				F21072221E6E617F00D7695D /* CMLoginRegisterManager.m in Sources */,
+				34101F8F21BD3D160000A335 /* CMRouterSwitcher.m in Sources */,
 				342C0C66217F015400227D24 /* CMDispatchMessageManager.m in Sources */,
 				F2618C261DF2C2DB00CB0605 /* AFImageDownloader.m in Sources */,
 				F2618C3D1DF2C2DB00CB0605 /* SDWebImageDecoder.m in Sources */,
